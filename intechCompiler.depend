@@ -5,11 +5,12 @@
 	<unistd.h>
 	<execinfo.h>
 
-1683730546 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
+1684242135 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
 	<stdio.h>
 	<stdlib.h>
-	"buffer.h"
+	"lib/unity_fixture.h"
 	"lexer.h"
+	"buffer.h"
 
 1683721069 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\buffer.h
 	<stdio.h>
@@ -24,14 +25,79 @@
 
 1683724262 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\utils.h
 
-1683727914 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.h
+1684139029 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.h
 	"buffer.h"
 
-1683731257 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.c
+1684242098 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.c
 	"lexer.h"
 	"assert.h"
 	<ctype.h>
 	<stdlib.h>
 	<stdio.h>
 	<stdlib.h>
+	"buffer.h"
+
+1683775560 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity.c
+	"unity.h"
+
+1683775560 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity.h
+	"unity_internals.h"
+
+1683775560 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity_internals.h
+	"unity_config.h"
+	<setjmp.h>
+	<math.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdint.h>
+	<limits.h>
+	<sdkddkver.h>
+	<stdnoreturn.h>
+	<stdio.h>
+	<stdio.h>
+	<time.h>
+	<time.h>
+
+1683775560 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity_fixture.c
+	"unity_fixture.h"
+	"unity_internals.h"
+	<string.h>
+
+1683775560 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity_fixture.h
+	"unity.h"
+	"unity_fixture_internals.h"
+	"unity_memory.h"
+	"unity_internals.h"
+
+1683775560 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity_fixture_internals.h
+
+1683775560 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity_memory.h
+	<stddef.h>
+	<stdlib.h>
+
+1683775560 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lib\unity_memory.c
+	"unity.h"
+	"unity_memory.h"
+	<string.h>
+	<stdlib.h>
+
+1684162707 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
+	"../lib/unity_fixture.h"
+
+1684162773 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtest.c
+	"../lib/unity_fixture.h"
+	"../lib/unity.h"
+	"../buffer.h"
+	"../lexer.h"
+	"assert.h"
+
+1683962316 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumrollbacktest.c
+	"../lib/unity_fixture.h"
+	"../lib/unity.h"
+	"../buffer.h"
+	"../lexer.h"
+
+1684242511 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getnumbertest.c
+	"../lib/unity_fixture.h"
+	"../buffer.h"
 

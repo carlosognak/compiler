@@ -1,23 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-#include "buffer.h"
+#include "lib/unity_fixture.h"
 #include "lexer.h"
+#include "buffer.h"
 
-int main()
+static void runAllTest(void){
+    RUN_TEST_GROUP(LexerGetAlphanum);
+    RUN_TEST_GROUP(lexergetalphanumhaRollback);
+    RUN_TEST_GROUP(Lexer_GetNumber);
+}
+
+int main(int argc, char * argv[])
 {
-    FILE* demo;
 
-    demo = fopen("intech.txt", "r+");
+    return UnityMain(argc, argv, runAllTest);
 
-    buffer_t buffer;
-    buf_init(&buffer, demo);
-
-    printf("%s\n", lexer_getalphanum(&buffer));
-    printf("%s\n", lexer_getalphanum(&buffer));
-    printf("%s\n", lexer_getalphanum(&buffer));
-    printf("%s\n", lexer_getalphanum(&buffer));
-
-    fclose(demo);
-    return 0;
 }
