@@ -36,6 +36,7 @@
 		</Unit>
 		<Unit filename="buffer.h" />
 		<Unit filename="intech.txt" />
+		<Unit filename="intech1.txt" />
 		<Unit filename="lexer.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -57,6 +58,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="number.txt" />
+		<Unit filename="test/getNumberTest.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/getalphanumRollbackTest.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -70,6 +75,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="utils.h" />
+		<Unit filename="variable_with_number.txt" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

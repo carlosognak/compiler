@@ -8,15 +8,21 @@
 
 TEST_GROUP(lexergetalphanumhaRollback);
 
-FILE* demo;
+FILE* fp;
 buffer_t buffer;
 
 TEST_SETUP(lexergetalphanumhaRollback){
-    demo = fopen("intech.txt", "r+");
-    buf_init(&buffer, demo);
+    fp = fopen("intech.txt", "r+");
+
+    if(fp == NULL){
+        printf("Could not read the file");
+        exit(1);
+    }
+    buf_init(&buffer, fp);
 }
 TEST_TEAR_DOWN(lexergetalphanumhaRollback){
-    fclose(demo);
+
+    fclose(fp);
 }
 
 TEST(lexergetalphanumhaRollback, testAlphanumFoundButIteratorNotMoved){
@@ -28,4 +34,7 @@ TEST(lexergetalphanumhaRollback, testBufferIteratorNotMoved){
 
    TEST_ASSERT_EQUAL(3, strlen(lexer_getalphanum_rollback(&buffer)));
    TEST_ASSERT_EQUAL(0, buffer.it);
+   TEST_ASSERT_EQUAL_CHAR_ARRAY("int",lexer_getalphanum_rollback(&buffer), 3);
+   TEST_ASSERT_EQUAL(0, buffer.it);
+
 }
