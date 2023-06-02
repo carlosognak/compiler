@@ -81,7 +81,7 @@
 	<string.h>
 	<stdlib.h>
 
-1684162707 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
+1685694970 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
 	"../lib/unity_fixture.h"
 
 1684162773 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtest.c
@@ -97,7 +97,7 @@
 	"../buffer.h"
 	"../lexer.h"
 
-1684242511 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getnumbertest.c
+1684242659 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getnumbertest.c
 	"../lib/unity_fixture.h"
 	"../buffer.h"
 

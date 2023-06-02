@@ -27,8 +27,8 @@ TEST_GROUP_RUNNER(lexergetalphanumhaRollback){
     RUN_TEST_CASE(lexergetalphanumhaRollback, testAlphanumFoundButIteratorNotMoved)
 }
 
-TEST_GROUP(Lexer_GetNumber);
+TEST_GROUP(GetNumberLexer);
 
-TEST_GROUP_RUNNER(Lexer_GetNumber){
-    RUN_TEST_CASE(Lexer_GetNumber, FindAllNumber);
+TEST_GROUP_RUNNER(GetNumberLexer){
+    RUN_TEST_CASE(GetNumberLexer, FindAllNumber);
 }
