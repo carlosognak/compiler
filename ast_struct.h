@@ -43,17 +43,19 @@ typedef enum{
     OP_LOGICAL_NEGATION // !
 }ast_unary_e;
 
-typedef struct ast_list_t{
 
-}ast_list_t;
+
 
 typedef struct ast_t {
      ast_node_type_e type;
 
-     // variable structure to represent a variable
      union {
-         long integer;
-         struct {
+
+     // structure for integers
+     long integer;
+
+     // variable structure to represent a variable
+     struct {
          char *name;
          int type;
      } var;
@@ -123,5 +125,12 @@ typedef struct ast_t {
 
      };
 } ast_t;
+
+
+typedef struct ast_list_t{
+    ast_t *data;
+    struct ast_list_t *next;
+}ast_list_t;
+
 
 #endif // AST_STRUCT_H_INCLUDED

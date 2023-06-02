@@ -5,7 +5,7 @@
 	<unistd.h>
 	<execinfo.h>
 
-1685697504 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
+1685718048 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
 	<stdio.h>
 	<stdlib.h>
 	"lib/unity_fixture.h"
@@ -28,7 +28,7 @@
 1684139029 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.h
 	"buffer.h"
 
-1685700342 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.c
+1685702076 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.c
 	"lexer.h"
 	"assert.h"
 	<ctype.h>
@@ -81,10 +81,10 @@
 	<string.h>
 	<stdlib.h>
 
-1685697504 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
+1685718033 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
 	"../lib/unity_fixture.h"
 
-1684162773 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtest.c
+1685702288 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtest.c
 	"../lib/unity_fixture.h"
 	"../lib/unity.h"
 	"../buffer.h"
@@ -100,4 +100,43 @@
 1684242659 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getnumbertest.c
 	"../lib/unity_fixture.h"
 	"../buffer.h"
+
+1685717043 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.c
+	"lexical_analizer.h"
+	"ast_struct.h"
+
+1685699475 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.h
+	"ast_struct.h"
+
+1685719260 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\ast_struct.h
+
+1685711344 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\test.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../lexical_analizer.h"
+	"../../ast_struct.h"
+
+1685713834 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_variable.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../lexical_analizer.h"
+	"../../ast_struct.h"
+
+1685716910 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_binary.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../lexical_analizer.h"
+	"../../ast_struct.h"
+
+1685711344 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_integer.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../lexical_analizer.h"
+	"../../ast_struct.h"
+
+1685718075 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_unary.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../lexical_analizer.h"
+	"../../ast_struct.h"
 
