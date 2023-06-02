@@ -1,3 +1,4 @@
+/*
 #include "../lib/unity_fixture.h"
 
 #include "../lib/unity.h"
@@ -38,3 +39,5 @@ TEST(lexergetalphanumhaRollback, testBufferIteratorNotMoved){
    TEST_ASSERT_EQUAL(0, buffer.it);
 
 }
+
+*/

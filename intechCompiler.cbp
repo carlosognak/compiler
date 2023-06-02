@@ -76,6 +76,18 @@
 		<Unit filename="test/getalphanumTestRunner.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/lexical_analyzer/new_binary.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/lexical_analyzer/new_integer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/lexical_analyzer/new_unary.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/lexical_analyzer/new_variable.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="utils.c">
 			<Option compilerVar="CC" />
 		</Unit>

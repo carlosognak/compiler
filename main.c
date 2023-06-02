@@ -5,9 +5,9 @@
 #include "buffer.h"
 
 static void runAllTest(void){
-    RUN_TEST_GROUP(LexerGetAlphanum);
-    RUN_TEST_GROUP(lexergetalphanumhaRollback);
-    RUN_TEST_GROUP(GetNumberLexer);
+    RUN_TEST_GROUP(alphanum);
+    RUN_TEST_GROUP(alphanum_rollback);
+    RUN_TEST_GROUP(number);
     RUN_TEST_GROUP(lexical_analyser);
     RUN_TEST_GROUP(new_variable);
     RUN_TEST_GROUP(new_binary);

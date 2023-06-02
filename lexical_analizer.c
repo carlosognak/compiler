@@ -1,5 +1,6 @@
 #include "lexical_analizer.h"
 #include "ast_struct.h"
+#include <stdio.h>
 
 ast_t *ast_new_integer(long val){
 
@@ -43,44 +44,44 @@ ast_t *ast_new_function (char *name, int return_type, ast_list_t *params, ast_li
     ast_t *ast = malloc(sizeof(ast_t));
 
     ast->function.name = name;
-    ast->function->params = params;
-    ast->function->stmts = stmts;
+    ast->function.params = params;
+    ast->function.stmts = stmts;
 
     return ast;
 }
 ast_t *ast_new_fncall (char *name, ast_list_t *args){
      ast_t *ast = malloc(sizeof(ast_t));
      ast->call.name = name;
-     ast->call->args = args;
+     ast->call.args = args;
 
      return ast;
 }
 ast_t *ast_new_comp_stmt (ast_list_t *stmts){
      ast_t *ast = malloc(sizeof(ast_t));
 
-     ast->compound_stmt->stmts = stmts;
+     ast->compound_stmt.stmts = stmts;
      return ast;
 }
 ast_t *ast_new_assignment (ast_t *lvalue, ast_t *rvalue){
      ast_t *ast = malloc(sizeof(ast_t));
 
-     ast->assignment->lvalue = lvalue;
-     ast->assignment->rvalue = rvalue;
+     ast->assignment.lvalue = lvalue;
+     ast->assignment.rvalue = rvalue;
      return ast;
 }
 ast_t *ast_new_declaration (ast_t *lvalue, ast_t *rvalue){
     ast_t *ast = malloc(sizeof(ast_t));
 
-    ast->declaration->lvalue = lvalue;
-    ast->declaration->rvalue = rvalue;
+    ast->declaration.lvalue = lvalue;
+    ast->declaration.rvalue = rvalue;
     return ast;
 }
 ast_t *ast_new_condition (ast_t *condition, ast_t *valid, ast_t *invalid){
      ast_t *ast = malloc(sizeof(ast_t));
 
-     ast->branch->condition = condition;
-     ast->branch->valid = valid;
-     ast->branch->invalid = invalid;
+     ast->branch.condition = condition;
+     ast->branch.valid = valid;
+     ast->branch.invalid = invalid;
 
      return ast;
 }
@@ -88,15 +89,15 @@ ast_t *ast_new_condition (ast_t *condition, ast_t *valid, ast_t *invalid){
 ast_t *ast_new_loop (ast_t *condition, ast_t *stmt){
      ast_t *ast = malloc(sizeof(ast_t));
 
-     ast->loop->condition = condition;
-     ast->loop->stmt = stmt;
+     ast->loop.condition = condition;
+     ast->loop.stmt = stmt;
 
      return ast;
 }
 ast_t *ast_new_return (ast_t *expr){
      ast_t *ast = malloc(sizeof(ast_t));
 
-     ast->ret->expr = exprs;
+     ast->ret.expr = expr;
 
      return ast;
 }

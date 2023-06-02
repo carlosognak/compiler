@@ -1,16 +1,13 @@
-/*
-
-#include "../lib/unity_fixture.h"
-#include "../buffer.h"
+#include "../../exports.h"
 
 
-TEST_GROUP(GetNumberLexer);
+TEST_GROUP(number);
 
 FILE *fp;
 
 buffer_t buffer;
 
-TEST_SETUP(GetNumberLexer){
+TEST_SETUP(number){
 
     fp = fopen("number.txt", "r+");
 
@@ -21,11 +18,11 @@ TEST_SETUP(GetNumberLexer){
     buf_init(&buffer, fp);
 }
 
-TEST_TEAR_DOWN(GetNumberLexer){
+TEST_TEAR_DOWN(number){
     fclose(fp);
 }
 
-TEST(GetNumberLexer, FindAllNumber){
+TEST(number, test_find_all_numbers_in_the_buffer){
 
     TEST_ASSERT_EQUAL(125, lexer_getnumber(&buffer));
 
@@ -45,5 +42,3 @@ TEST(GetNumberLexer, FindAllNumber){
 
     TEST_ASSERT_EQUAL(100, lexer_getnumber(&buffer));
 }
-
-*/
