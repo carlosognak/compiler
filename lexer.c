@@ -72,8 +72,6 @@ char *lexer_getalphanum(buffer_t* buffer){
 
     str[length] = '\0';
 
-    //free(str);
-
     return str;
 }
 
