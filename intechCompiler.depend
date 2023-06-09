@@ -5,12 +5,8 @@
 	<unistd.h>
 	<execinfo.h>
 
-1685718048 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
-	<stdio.h>
-	<stdlib.h>
-	"lib/unity_fixture.h"
-	"lexer.h"
-	"buffer.h"
+1685727519 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
+	"exports.h"
 
 1683721069 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\buffer.h
 	<stdio.h>
@@ -81,29 +77,30 @@
 	<string.h>
 	<stdlib.h>
 
-1685718033 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
+1685723704 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtestrunner.c
 	"../lib/unity_fixture.h"
 
-1685702288 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtest.c
+1685723723 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumtest.c
 	"../lib/unity_fixture.h"
 	"../lib/unity.h"
 	"../buffer.h"
 	"../lexer.h"
 	"assert.h"
 
-1683962316 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumrollbacktest.c
+1685723743 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getalphanumrollbacktest.c
 	"../lib/unity_fixture.h"
 	"../lib/unity.h"
 	"../buffer.h"
 	"../lexer.h"
 
-1684242659 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getnumbertest.c
+1685723775 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\getnumbertest.c
 	"../lib/unity_fixture.h"
 	"../buffer.h"
 
-1685717043 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.c
+1685724070 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.c
 	"lexical_analizer.h"
 	"ast_struct.h"
+	<stdio.h>
 
 1685699475 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.h
 	"ast_struct.h"
@@ -116,27 +113,44 @@
 	"../../lexical_analizer.h"
 	"../../ast_struct.h"
 
-1685713834 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_variable.c
-	"../../lib/unity_fixture.h"
-	"../../lib/unity.h"
-	"../../lexical_analizer.h"
-	"../../ast_struct.h"
+1685724772 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_variable.c
+	"../../exports.h"
 
-1685716910 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_binary.c
-	"../../lib/unity_fixture.h"
-	"../../lib/unity.h"
-	"../../lexical_analizer.h"
-	"../../ast_struct.h"
+1685724732 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_binary.c
+	"../../exports.h"
 
-1685711344 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_integer.c
-	"../../lib/unity_fixture.h"
-	"../../lib/unity.h"
-	"../../lexical_analizer.h"
-	"../../ast_struct.h"
+1685727630 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_integer.c
+	"../../exports.h"
 
-1685718075 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_unary.c
-	"../../lib/unity_fixture.h"
-	"../../lib/unity.h"
-	"../../lexical_analizer.h"
-	"../../ast_struct.h"
+1685724762 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_unary.c
+	"../../exports.h"
+
+1685726925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum.c
+	"../../exports.h"
+
+1685727238 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum_rollback.c
+	"../../exports.h"
+
+1685727323 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_number.c
+	"../../exports.h"
+
+1685724545 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\runner.c
+	"../../exports.h"
+
+1685727662 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\test_runner.c
+	"../../exports.h"
+
+1685727501 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\exports.h
+	<stdio.h>
+	<stdlib.h>
+	"./lib/unity_fixture.h"
+	"./lib/unity.h"
+	"buffer.h"
+	"lexer.h"
+	"assert.h"
+	"ast_struct.h"
+	"./lexical_analizer.h"
+
+1685727330 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\test_runner.c
+	"../../exports.h"
 

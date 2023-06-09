@@ -1,7 +1,4 @@
-#include "../../lib/unity_fixture.h""
-#include "../../lib/unity.h"
-#include "../../lexical_analizer.h"
-#include "../../ast_struct.h"
+#include "../../exports.h"
 
 TEST_GROUP(new_binary);
 
