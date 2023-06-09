@@ -36,6 +36,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="buffer.h" />
+		<Unit filename="exports.h" />
 		<Unit filename="intech.txt" />
 		<Unit filename="intech1.txt" />
 		<Unit filename="lexer.c">
@@ -64,16 +65,16 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="number.txt" />
-		<Unit filename="test/getNumberTest.c">
+		<Unit filename="test/lexers/get_alphanum.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="test/getalphanumRollbackTest.c">
+		<Unit filename="test/lexers/get_alphanum_rollback.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="test/getalphanumTest.c">
+		<Unit filename="test/lexers/get_number.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="test/getalphanumTestRunner.c">
+		<Unit filename="test/lexers/test_runner.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/lexical_analyzer/new_binary.c">
@@ -86,6 +87,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/lexical_analyzer/new_variable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/lexical_analyzer/test_runner.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="utils.c">

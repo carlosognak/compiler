@@ -1,6 +1,10 @@
 #ifndef EXPORTS_H_INCLUDED
 #define EXPORTS_H_INCLUDED
 
+#include <stdio.h>
+
+#include <stdlib.h>
+
 #include "./lib/unity_fixture.h"
 
 #include "./lib/unity.h"

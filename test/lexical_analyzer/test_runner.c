@@ -1,10 +1,10 @@
 #include "../../exports.h"
 
-TEST_GROUP(lexical_analyser);
+TEST_GROUP(new_integer);
 
-TEST_GROUP_RUNNER(lexical_analyser){
-    RUN_TEST_CASE(lexical_analyser, test_new_integer_ast_created);
-    RUN_TEST_CASE(lexical_analyser, test_new_integer_ast_complementary);
+TEST_GROUP_RUNNER(new_integer){
+    RUN_TEST_CASE(new_integer, test_new_integer_ast_created);
+    RUN_TEST_CASE(new_integer, test_new_integer_ast_complementary);
 }
 
 TEST_GROUP(new_variable);
