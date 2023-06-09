@@ -5,7 +5,7 @@
 	<unistd.h>
 	<execinfo.h>
 
-1685727519 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
+1685727820 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
 	"exports.h"
 
 1683721069 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\buffer.h
@@ -125,7 +125,7 @@
 1685724762 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_unary.c
 	"../../exports.h"
 
-1685726925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum.c
+1686315644 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum.c
 	"../../exports.h"
 
 1685727238 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum_rollback.c
