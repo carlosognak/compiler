@@ -33,3 +33,10 @@ TEST_GROUP_RUNNER(new_unary){
     RUN_TEST_CASE(new_unary,test_unary_operand_not_null);
     RUN_TEST_CASE(new_unary,test_unary_op_not_null);
 }
+
+TEST_GROUP(ast_list_add);
+TEST_GROUP_RUNNER(ast_list_add){
+    RUN_TEST_CASE(ast_list_add,test_param_list_not_null);
+    RUN_TEST_CASE(ast_list_add, test_parameter_type);
+    RUN_TEST_CASE(ast_list_add, test_parameter_name);
+}

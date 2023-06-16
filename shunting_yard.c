@@ -1,4 +1,4 @@
-#include "shuting_yard"
+#include "shunting_yard.h"
 
 
 int getPriority(char c){
@@ -7,7 +7,7 @@ int getPriority(char c){
 
     else if(c == "*" || c == "/")
         return 2;
-    else:
+    else
         return 0;
 }
 

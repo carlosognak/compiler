@@ -65,6 +65,16 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="number.txt" />
+		<Unit filename="program_1.txt" />
+		<Unit filename="shunting_yard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shunting_yard.h" />
+		<Unit filename="syntax_analyser.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="syntax_analyser.h" />
 		<Unit filename="test/lexers/get_alphanum.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -80,6 +90,9 @@
 		<Unit filename="test/lexical_analyzer/new_binary.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/lexical_analyzer/new_function.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/lexical_analyzer/new_integer.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -90,6 +103,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/lexical_analyzer/test_runner.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/syntax_analyser/analyse_parameters.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/syntax_analyser/test_runner.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="utils.c">

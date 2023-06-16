@@ -5,7 +5,7 @@
 	<unistd.h>
 	<execinfo.h>
 
-1685727820 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
+1686869837 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\main.c
 	"exports.h"
 
 1683721069 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\buffer.h
@@ -24,7 +24,7 @@
 1684139029 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.h
 	"buffer.h"
 
-1685702076 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.c
+1686873230 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexer.c
 	"lexer.h"
 	"assert.h"
 	<ctype.h>
@@ -97,15 +97,18 @@
 	"../lib/unity_fixture.h"
 	"../buffer.h"
 
-1685724070 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.c
+1686875625 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.c
 	"lexical_analizer.h"
 	"ast_struct.h"
 	<stdio.h>
+	<errno.h>
+	<stdlib.h>
 
-1685699475 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.h
+1686862281 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\lexical_analizer.h
 	"ast_struct.h"
+	"buffer.h"
 
-1685719260 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\ast_struct.h
+1686317016 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\ast_struct.h
 
 1685711344 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\test.c
 	"../../lib/unity_fixture.h"
@@ -125,7 +128,7 @@
 1685724762 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_unary.c
 	"../../exports.h"
 
-1686315644 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum.c
+1686320043 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum.c
 	"../../exports.h"
 
 1685727238 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\get_alphanum_rollback.c
@@ -137,10 +140,10 @@
 1685724545 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\runner.c
 	"../../exports.h"
 
-1685727662 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\test_runner.c
+1686870197 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\test_runner.c
 	"../../exports.h"
 
-1685727501 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\exports.h
+1686862350 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\exports.h
 	<stdio.h>
 	<stdlib.h>
 	"./lib/unity_fixture.h"
@@ -152,5 +155,25 @@
 	"./lexical_analizer.h"
 
 1685727330 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexers\test_runner.c
+	"../../exports.h"
+
+1686862292 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\syntax_analyser.h
+	"buffer.h"
+
+1686319114 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\new_function.c
+	"../../exports.h"
+
+1686553947 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\shunting_yard.c
+	"shunting_yard.h"
+
+1686318141 c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\shunting_yard.h
+
+1686554131 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\syntax_analyser\test_runner.c
+	"../../exports.h"
+
+1686875838 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\syntax_analyser\analyse_parameters.c
+	"../../exports.h"
+
+1686870308 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\ast_list_add.c
 	"../../exports.h"
 

@@ -51,13 +51,10 @@ char *lexer_getalphanum(buffer_t* buffer){
 
     char *str = malloc(sizeof(char) * 1);
 
-    char buf_char = buf_getchar(buffer);
+    char buf_char = buf_getchar_after_blank(buffer);
 
     int length = 0;
 
-    if(isspace(buf_char)){
-        buf_skipblank(buffer);
-    }
 
     while(isalnum(buf_char) || buf_char == '_'){
 
@@ -71,7 +68,6 @@ char *lexer_getalphanum(buffer_t* buffer){
     }
 
     str[length] = '\0';
-
     return str;
 }
 
