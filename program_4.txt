@@ -1,0 +1,3 @@
+function add(entier a, entier b): entier{
+    return a + 12;
+}

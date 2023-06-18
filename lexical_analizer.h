@@ -26,7 +26,7 @@ ast_list_t  *analyse_parameters(buffer_t *buffer);
 
 ast_t *analyse_function_body(buffer_t *buffer);
 
-ast_t *analyse_returned_type(buffer_t *buffer);
+int analyse_returned_type(buffer_t *buffer);
 
 int parser(buffer_t *buffer);
 

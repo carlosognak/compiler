@@ -15,7 +15,9 @@ static void runAllTest(void){
     RUN_TEST_GROUP(ast_list_add);
 
     // syntax analyzer test runner group
-    RUN_TEST_GROUP(test_analyse_function);
+    RUN_TEST_GROUP(analyse_parameter);
+    RUN_TEST_GROUP(analyse_function);
+    RUN_TEST_GROUP(analyse_returned_type);
 }
 
 int main(int argc, char * argv[])

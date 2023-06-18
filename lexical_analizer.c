@@ -124,12 +124,9 @@ ast_list_t *ast_list_add (ast_list_t **list, ast_t *elem){
 }
 
 
-
-
-
 ast_t *analyse_function(buffer_t *buffer){
 
-    ast_t *function_tree =  NULL;
+    ast_t *ast =  NULL;
 
     // open file and give it to the buffer
     // get the lexeme using get_alphanum
@@ -141,9 +138,17 @@ ast_t *analyse_function(buffer_t *buffer){
     // analyze function name
 
     ast_list_t *list_of_params = analyse_parameters(buffer);
-    function_tree = ast_new_function(function_name, 1, list_of_params, stmts_list);
 
-    return function_tree;
+    int returned_type = analyse_returned_type(buffer);
+
+        // invalid returned type encounter
+    if(returned_type == -1){
+        exit(EXIT_FAILURE);
+    }
+
+    ast = ast_new_function(function_name, returned_type,list_of_params, stmts_list);
+
+    return ast;
 }
 
 ast_list_t *analyse_parameters(buffer_t *buffer){
@@ -190,7 +195,6 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
         parameter_list_node = ast_list_add(parameter_list_node, variable_node);
 
         next_lexeme = lexer_getalphanum(buffer);
-
     }
 
     return parameter_list_node;
@@ -200,9 +204,33 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 ast_t *analyse_function_body(buffer_t *buffer){
 
 
-
 }
-ast_t *analyse_returned_type(buffer_t *buffer){
+int analyse_returned_type(buffer_t *buffer){
+
+    //this should be fixed
+    buffer->it -= 1;
+
+    char semil_colon = buf_getchar_after_blank(buffer);
+
+    if(semil_colon != ':'){
+         fprintf(stderr, "Error missing ':' symbol");
+         exit(EXIT_FAILURE);
+    }
+
+    char *returned_type = lexer_getalphanum(buffer);
+
+    int type_number;
+
+    if(strcmp(returned_type, "rien") == 0){
+        type_number = 1;
+    }else if(strcmp(returned_type, "entier") == 0){
+        type_number = 2;
+    }else{
+        type_number = -1;
+        fprintf(stderr, "invalid type %s", returned_type);
+    }
+
+    return type_number;
 
 }
 
