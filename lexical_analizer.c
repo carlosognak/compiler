@@ -1,8 +1,11 @@
 #include "lexical_analizer.h"
+#include "syntax_analyser.h"
+
 #include "ast_struct.h"
 #include <stdio.h>
 #include <errno.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 
 ast_t *ast_new_integer(long val){
@@ -150,12 +153,10 @@ ast_t *analyse_function(buffer_t *buffer){
 
     return ast;
 }
-
+/*
 ast_list_t *analyse_parameters(buffer_t *buffer){
 
     ast_list_t *parameter_list_node = NULL;
-
-    buffer->it -= 1;
 
     char next_char = buf_getchar_after_blank(buffer);
 
@@ -199,12 +200,71 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 
     return parameter_list_node;
 
+}*/
+
+ast_list_t *analyse_parameters(buffer_t *buffer){
+
+    ast_list_t *params_list = NULL;
+
+    ast_t *ast_parameter_node = NULL;
+
+    char next_char = buf_getchar_after_blank(buffer);
+
+    if(next_char != '('){
+        fprintf(stderr, "missing '(' after function name", strerror(errno));
+        exit(EXIT_FAILURE);
+    }
+
+    char *next_lexeme;
+
+    bool result;
+
+    while(next_char != ')'){
+
+        next_lexeme = lexer_getalphanum(buffer);
+
+        result = is_allowed_type(next_lexeme);
+
+        if(result == true){
+
+            int parameter_type = lexeme_to_type(next_lexeme);
+
+            next_lexeme = lexer_getalphanum(buffer);
+
+            if(is_lexeme_keyword(next_lexeme) == true){
+                fprintf(stderr, "\n Error: %s is a keyword and cannot be used as param name", next_lexeme);
+                exit(EXIT_FAILURE);
+            }
+
+            result = is_lexeme_digit(next_lexeme);
+
+            if(result == true){
+                fprintf(stderr, "\n Error: %s is number and cannot be used as parameter name", next_lexeme);
+                exit(EXIT_FAILURE);
+            }
+
+            char *parameter_name = next_lexeme;
+
+            ast_parameter_node = ast_new_variable(parameter_name, parameter_type);
+
+            params_list = ast_list_add(params_list, ast_parameter_node);
+
+            next_char = buf_getchar(buffer);
+        }
+        else{
+            fprintf(stderr, "\n Error: invalid parameter type %d", result);
+            exit(EXIT_FAILURE);
+        }
+    }
+    return params_list;
+
 }
 
 ast_t *analyse_function_body(buffer_t *buffer){
 
 
 }
+
 int analyse_returned_type(buffer_t *buffer){
 
     //this should be fixed

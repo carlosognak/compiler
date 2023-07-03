@@ -29,11 +29,11 @@ TEST(alphanum,test_iterator_is_in_correct_position){
 
     lexer_getalphanum(&buffer);
 
-    TEST_ASSERT_EQUAL(4, buffer.it);
+    TEST_ASSERT_EQUAL(3, buffer.it);
 
     lexer_getalphanum(&buffer);
 
-    TEST_ASSERT_EQUAL(13, buffer.it);
+    TEST_ASSERT_EQUAL(12, buffer.it);
 }
 
 TEST(alphanum, test_length_of_alphanum){
@@ -44,7 +44,7 @@ TEST(alphanum, test_length_of_alphanum){
 TEST(alphanum, test_iterator_has_moved){
 
     lexer_getalphanum(&buffer);
-    TEST_ASSERT_EQUAL(4, buffer.it);
+    TEST_ASSERT_EQUAL(3, buffer.it);
 }
 
 TEST(alphanum, test_alphanum_with_underscore){

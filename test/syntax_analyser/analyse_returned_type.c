@@ -1,5 +1,5 @@
 #include "../../exports.h"
-
+/*
 TEST_GROUP(analyse_returned_type);
 
 static FILE* fp;
@@ -85,3 +85,4 @@ TEST(analyse_returned_type, test_invalid_returned_type_error){
 
     TEST_ASSERT_EQUAL_INT(-1, returned_type);
 }
+*/

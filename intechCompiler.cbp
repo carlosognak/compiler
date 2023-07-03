@@ -66,6 +66,9 @@
 		</Unit>
 		<Unit filename="number.txt" />
 		<Unit filename="program_1.txt" />
+		<Unit filename="program_2.txt" />
+		<Unit filename="program_3.txt" />
+		<Unit filename="program_4.txt" />
 		<Unit filename="shunting_yard.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -87,6 +90,9 @@
 		<Unit filename="test/lexers/test_runner.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/lexical_analyzer/ast_list_add.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/lexical_analyzer/new_binary.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -105,7 +111,13 @@
 		<Unit filename="test/lexical_analyzer/test_runner.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/syntax_analyser/analyse_function.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/syntax_analyser/analyse_parameters.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/syntax_analyser/analyse_returned_type.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/syntax_analyser/test_runner.c">

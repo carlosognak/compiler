@@ -18,17 +18,4 @@ ast_t *ast_new_return (ast_t *expr);
 ast_list_t *ast_list_new_node (ast_t *elem);
 ast_list_t *ast_list_add (ast_list_t **list, ast_t *elem);
 
-
-
-ast_t *analyse_function(buffer_t *buffer);
-
-ast_list_t  *analyse_parameters(buffer_t *buffer);
-
-ast_t *analyse_function_body(buffer_t *buffer);
-
-int analyse_returned_type(buffer_t *buffer);
-
-int parser(buffer_t *buffer);
-
-
 #endif // LEXICAL_ANALIZER_H_INCLUDED

@@ -3,7 +3,7 @@
 
 ast_t *analyse_function(buffer_t *buffer){
 
-    ast_t *function_tree =  NULL;
+    ast_t *ast =  NULL;
 
     // open file and give it to the buffer
     // get the lexeme using get_alphanum
@@ -15,10 +15,19 @@ ast_t *analyse_function(buffer_t *buffer){
     // analyze function name
 
     ast_list_t *list_of_params = analyse_parameters(buffer);
-    function_tree = ast_new_function(function_name, 1, list_of_params, stmts_list);
 
-    return function_tree;
+    int returned_type = analyse_returned_type(buffer);
+
+        // invalid returned type encounter
+    if(returned_type == -1){
+        exit(EXIT_FAILURE);
+    }
+
+    ast = ast_new_function(function_name, returned_type,list_of_params, stmts_list);
+
+    return ast;
 }
+
 
 ast_list_t *analyse_parameters(buffer_t *buffer){
 
@@ -26,20 +35,30 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 
     char next_char = buf_getchar_after_blank(buffer);
 
-    if(next_char != '(')
-        fprintf(stderr, "missing open bracket for function", strerror(errno));
+    if(next_char != '('){
+        fprintf(stderr, "missing '(' after function name", strerror(errno));
         exit(EXIT_FAILURE);
-
+    }
     char *type_lexeme;
     char *function_name_lexeme;
     char *next_lexeme;
 
     do{
 
-        type_lexeme = lexer_getalphanum(buffer); // get parameter type
+        next_lexeme = lexer_getalphanum(buffer); // get parameter type
 
-        if(!strcmp(type_lexeme, "entier"))
-            return; // should return a error
+        if(is_allowed_type(next_lexeme) == 0){
+            fprintf(stderr, "Error: %s is unknown type.",);
+            exit(EXIT_FAILURE);
+        }
+
+        next_lexeme = lexer_getalphanum(buffer);
+
+        if(is_lexeme_empty(next_lexeme) == 0){
+            fprintf(stderr, "missing parameter.");
+            exit(EXIT_FAILURE);
+        }
+        fprintf(stderr, "parameter.",);
 
         function_name_lexeme = lexer_getalphanum(buffer); // get parameter name
         // check the existence of parameter name in the symbol table
@@ -57,14 +76,6 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 
 }
 
-ast_t *analyse_function_body(buffer *buffer){
-
-
-
-}
-ast_t *analyse_returned_type(buffer_t *buffer){
-
-}
 
 int parser(buffer_t *buffer){
 
