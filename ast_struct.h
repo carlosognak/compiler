@@ -29,7 +29,7 @@ typedef enum{
     OP_DIVISION,
     OP_SUBSTRACTION,
     OP_MULTIPLICATION,
-    OP_ADDITION
+    OP_ADDITION // +
 }ast_binary_e;
 
 typedef enum{

@@ -51,13 +51,10 @@ char *lexer_getalphanum(buffer_t* buffer){
 
     char *str = malloc(sizeof(char) * 1);
 
-    char buf_char = buf_getchar(buffer);
+    char buf_char = buf_getchar_after_blank(buffer);
 
     int length = 0;
 
-    if(isspace(buf_char)){
-        buf_skipblank(buffer);
-    }
 
     while(isalnum(buf_char) || buf_char == '_'){
 
@@ -68,10 +65,12 @@ char *lexer_getalphanum(buffer_t* buffer){
         str[length - 1] = buf_char;
 
         buf_char = buf_getchar(buffer);
+        if(!isalnum(buf_char)){
+            buffer->it -= 1;
+        }
     }
 
     str[length] = '\0';
-
     return str;
 }
 
@@ -81,7 +80,8 @@ char *lexer_getalphanum(buffer_t* buffer){
  * Extracts a alphanumeric string from the buffer
  * but the buffer iterator stays at it initial position
  *
- * buffer: the abstract buffer data structure
+ * buffer
+ : the abstract buffer data structure
  *
  * return: the alphanumeric string extracted from buffer
  */
@@ -92,9 +92,7 @@ char *lexer_getalphanum_rollback(buffer_t* buffer){
 
     size_t str_length = strlen(str);
 
-    buf_lock(buffer);
-    buf_rollback(buffer, str_length + 1);
-    buf_unlock(buffer);
+    buffer->it -= str_length;
 
     return str;
 }

@@ -1,0 +1,3 @@
+function main(entier nbr,entier nbr2, entier nbr3): entier{
+    return a + 12;
+}

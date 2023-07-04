@@ -17,6 +17,10 @@
 
 #include "ast_struct.h"
 
-#include "./lexical_analizer.h"
+#include "lexical_analizer.h"
+
+#include "syntax_analyser.h"
+
+#include "utils.h"
 
 #endif // EXPORTS_H_INCLUDED
