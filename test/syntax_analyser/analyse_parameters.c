@@ -33,10 +33,6 @@ TEST(test_group_analyse_parameter, test_function_name_equals_main){
     params_list = analyse_parameters(&buffer);
 
     TEST_ASSERT_NOT_NULL(params_list);
-
-    //TEST_ASSERT_EQUAL(1, params_list->data->var.type);
-
-    //TEST_ASSERT_EQUAL_CHAR_ARRAY("a", params_list->data->var.name, 1);
 }
 TEST(test_group_analyse_parameter, test_function_param_type_is_entier){
 
@@ -100,6 +96,7 @@ TEST(test_group_analyse_parameter, test_third_param_type_is_entier){
 TEST(test_group_analyse_parameter, test_function_with_two_parameters){
 
     fp = fopen("program_2.txt", "r");
+
     if(fp == NULL){
         printf("Could not read the file");
         exit(1);
@@ -117,5 +114,6 @@ TEST(test_group_analyse_parameter, test_function_with_two_parameters){
     TEST_ASSERT_EQUAL(32, buffer.it);
 
     TEST_ASSERT_EQUAL(1, params_list->data->var.type);
+
     TEST_ASSERT_EQUAL_CHAR_ARRAY("b", params_list->data->var.name, 1);
 }

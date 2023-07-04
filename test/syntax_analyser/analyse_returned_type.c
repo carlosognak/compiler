@@ -1,5 +1,5 @@
 #include "../../exports.h"
-/*
+
 TEST_GROUP(analyse_returned_type);
 
 static FILE* fp;
@@ -35,11 +35,11 @@ TEST(analyse_returned_type, test_returned_type_equals_rien){
 
     params_list = analyse_parameters(&buffer);
 
-    TEST_ASSERT_EQUAL(33, buffer.it);
+    TEST_ASSERT_EQUAL(32, buffer.it);
 
     returned_type = analyse_returned_type(&buffer);
 
-    TEST_ASSERT_EQUAL(1, returned_type);
+    TEST_ASSERT_EQUAL(0, returned_type);
 
 }
 
@@ -58,13 +58,13 @@ TEST(analyse_returned_type,test_returned_type_equals_entier){
 
     params_list = analyse_parameters(&buffer);
 
-    TEST_ASSERT_EQUAL(33, buffer.it);
+    TEST_ASSERT_EQUAL(32, buffer.it);
 
     returned_type = analyse_returned_type(&buffer);
 
-    TEST_ASSERT_EQUAL_INT(2, returned_type);
+    TEST_ASSERT_EQUAL_INT(1, returned_type);
 }
-
+/*
 TEST(analyse_returned_type, test_invalid_returned_type_error){
 
 
@@ -81,8 +81,5 @@ TEST(analyse_returned_type, test_invalid_returned_type_error){
 
     params_list = analyse_parameters(&buffer);
 
-    returned_type = analyse_returned_type(&buffer);
-
-    TEST_ASSERT_EQUAL_INT(-1, returned_type);
-}
-*/
+    TEST_ASSERT_EQUAL(1,analyse_returned_type(&buffer));
+}*/

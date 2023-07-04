@@ -138,7 +138,7 @@ ast_t *analyse_function(buffer_t *buffer){
 
     ast_list_t *stmts_list = NULL;
 
-    // analyze function name
+    // analyze function name must be done here
 
     ast_list_t *list_of_params = analyse_parameters(buffer);
 
@@ -149,59 +149,10 @@ ast_t *analyse_function(buffer_t *buffer){
         exit(EXIT_FAILURE);
     }
 
-    ast = ast_new_function(function_name, returned_type,list_of_params, stmts_list);
+    ast = ast_new_function(function_name, returned_type, list_of_params, stmts_list);
 
     return ast;
 }
-/*
-ast_list_t *analyse_parameters(buffer_t *buffer){
-
-    ast_list_t *parameter_list_node = NULL;
-
-    char next_char = buf_getchar_after_blank(buffer);
-
-    if(next_char != '('){
-        fprintf(stderr, "Error missing (", strerror(errno));
-        exit(EXIT_FAILURE);
-    }
-
-    char *parameter_type_lexeme, *parameter_name, *next_lexeme;
-
-    int parameter_type = 0;
-
-    next_lexeme = lexer_getalphanum(buffer);
-
-    while(next_lexeme[0] != ')' && next_lexeme[0] != '\0'){
-
-        int result = strcmp(next_lexeme, "entier");
-
-        if( result != 0){
-            fprintf(stderr, "Error missing type %s", next_lexeme);
-            exit(EXIT_FAILURE);
-        }
-
-        parameter_type_lexeme = next_lexeme;
-
-        next_lexeme = lexer_getalphanum(buffer); // get parameter name
-        // check the existence of parameter name in the symbol table
-        // does not exist add it in the symbol table
-        // create the ast list of type parameter
-
-        parameter_type = 1;
-
-        parameter_name = next_lexeme;
-
-        ast_t *variable_node = ast_new_variable(parameter_name, parameter_type);
-
-        parameter_list_node = ast_list_add(parameter_list_node, variable_node);
-
-        next_lexeme = lexer_getalphanum(buffer);
-    }
-
-    return parameter_list_node;
-
-}*/
-
 ast_list_t *analyse_parameters(buffer_t *buffer){
 
     ast_list_t *params_list = NULL;
@@ -215,7 +166,7 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
         exit(EXIT_FAILURE);
     }
 
-    char *next_lexeme;
+    char *next_lexeme = NULL;
 
     bool result;
 
@@ -243,9 +194,7 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
                 exit(EXIT_FAILURE);
             }
 
-            char *parameter_name = next_lexeme;
-
-            ast_parameter_node = ast_new_variable(parameter_name, parameter_type);
+            ast_parameter_node = ast_new_variable(next_lexeme, parameter_type);
 
             params_list = ast_list_add(params_list, ast_parameter_node);
 
@@ -262,36 +211,69 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 
 ast_t *analyse_function_body(buffer_t *buffer){
 
+    char next_symbol = buf_getchar_after_blank(buffer);
 
+    if(next_symbol != "{"){
+        fprintf(stderr, "Error missing '{' symbol");
+        exit(EXIT_FAILURE);
+    }
+
+    ast_t *ast_function_body_node = NULL;
+
+    char* next_lexeme = NULL;
+
+    while(next_symbol != '}'){
+
+        next_lexeme = lexer_getalphanum(buffer);
+
+        if(is_lexeme_keyword(next_lexeme) == false){
+            fprintf(stderr, "Error: %s is not a valid keyword.", next_lexeme);
+            exit(EXIT_FAILURE);
+        }
+
+        else if(is_allowed_type(next_lexeme) == false){
+            fprintf(stderr, "Error: %s is not a valid type.", next_lexeme);
+            exit(EXIT_FAILURE);
+        }
+
+        else if(is_lexeme_type_entier(lexeme)){
+
+        }
+    }
+
+    return ast_function_body_node;
 }
 
 int analyse_returned_type(buffer_t *buffer){
 
-    //this should be fixed
-    buffer->it -= 1;
+    char next_symbol = buf_getchar_after_blank(buffer);
 
-    char semil_colon = buf_getchar_after_blank(buffer);
-
-    if(semil_colon != ':'){
-         fprintf(stderr, "Error missing ':' symbol");
-         exit(EXIT_FAILURE);
+    if(next_symbol != ':'){
+        fprintf(stderr, "Error missing ':' symbol");
+        exit(EXIT_FAILURE);
     }
 
-    char *returned_type = lexer_getalphanum(buffer);
+    char* next_lexeme;
 
-    int type_number;
+    int type;
 
-    if(strcmp(returned_type, "rien") == 0){
-        type_number = 1;
-    }else if(strcmp(returned_type, "entier") == 0){
-        type_number = 2;
-    }else{
-        type_number = -1;
-        fprintf(stderr, "invalid type %s", returned_type);
+    while(next_symbol != '{'){
+
+        next_lexeme = lexer_getalphanum(buffer);
+
+        bool result = is_allowed_type(next_lexeme);
+
+        if(result == false){
+            fprintf(stderr, "Error: %s is not a valid type", next_lexeme);
+            exit(EXIT_FAILURE);
+        }
+
+        type = lexeme_to_type(next_lexeme);
+
+        next_symbol = buf_getchar_rollback(buffer);
     }
 
-    return type_number;
-
+    return type;
 }
 
 int parser(buffer_t *buffer){

@@ -22,12 +22,11 @@ TEST_GROUP_RUNNER(test_group_analyse_function){
     RUN_TEST_CASE(test_group_analyse_function, test_function_param_name_not_null);
     RUN_TEST_CASE(test_group_analyse_function, test_function_with_multi_params);
 }
-/*
+
 TEST_GROUP(analyse_returned_type);
 TEST_GROUP_RUNNER(analyse_returned_type){
 
     RUN_TEST_CASE(analyse_returned_type, test_returned_type_equals_rien);
     RUN_TEST_CASE(analyse_returned_type, test_returned_type_equals_entier);
-    RUN_TEST_CASE(analyse_returned_type, test_invalid_returned_type_error);
+    //RUN_TEST_CASE(analyse_returned_type, test_invalid_returned_type_error);
 }
-*/

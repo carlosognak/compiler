@@ -17,7 +17,7 @@ static void runAllTest(void){
     // syntax analyzer test runner group
     RUN_TEST_GROUP(test_group_analyse_parameter);
     RUN_TEST_GROUP(test_group_analyse_function);
-    //RUN_TEST_GROUP(analyse_returned_type);
+    RUN_TEST_GROUP(analyse_returned_type);
 }
 
 int main(int argc, char * argv[])

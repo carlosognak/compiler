@@ -31,13 +31,13 @@ void print_backtrace ()
 #endif /* WIN32 */
 }
 bool is_lexeme_keyword(char *lexeme){
-    if(strcmp(lexeme, "entier") == 0)
+    if(is_lexeme_type_entier(lexeme))
         return true;
 
-    else if(strcmp(lexeme, "si") == 0)
+    else if(is_lexeme_keyword_si(lexeme))
         return true;
 
-    else if(strcmp(lexeme, "tanque") == 0)
+    else if(is_lexeme_keyword_sinon(lexeme))
         return true;
 
     return false;
@@ -47,13 +47,22 @@ bool is_lexeme_type_entier(char* lexeme){
         return true;
     return false;
 }
+bool is_lexeme_type_char(char* lexeme){
+    if(strcmp(lexeme, "char") == 0)
+        return true;
+    return false;
+}
 bool is_allowed_type(char* lexeme){
+
     if(strcmp(lexeme,"entier") == 0){
         return true;
     }
 
     else if(strcmp(lexeme,"char") == 0){
          return true;
+    }
+    else if(strcmp(lexeme, "rien") == 0){
+        return true;
     }
     return false;
 }
@@ -77,5 +86,28 @@ int lexeme_to_type(char* lexeme){
     if(is_lexeme_type_entier(lexeme))
         return 1;
 
+    else if(strcmp(lexeme, "rien") == 0)
+        return 0;
+
+    else if(strcmp(lexeme, "char") == 0)
+        return 2;
+
     return -1;
+}
+bool is_lexeme_keyword_si(char *lexeme){
+    if(strcmp(lexeme, "si") == 0)
+        return true;
+
+    return false;
+}
+bool is_lexeme_keyword_sinon(char* lexeme){
+    if(strcmp(lexeme, "sinon") == 0)
+        return true
+
+    return false;
+}
+bool is_lexeme_keyword_tanque(char* lexeme){
+    if(strcmp(lexeme, "tanque") == 0)
+        return true;
+    return false;
 }
