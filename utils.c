@@ -5,8 +5,11 @@
 #include <unistd.h>
 #include <execinfo.h>
 #endif
-#include "./utils.h"
-#include <string.h>
+
+#include "buffer.h"
+#include "utils.h"
+#include "ast_struct.h"
+#include "lexer.h"
 
 
 char *copy_name (char *name)
@@ -130,4 +133,29 @@ bool is_lexeme_keyword_tanque(char* lexeme){
     if(strcmp(lexeme, "tanque") == 0)
         return true;
     return false;
+}
+ast_list_t *add_statement_to_list(buffer_t *buffer, ast_list_t **statements_list){
+
+    char *next_lexeme = lexer_getalphanum(buffer);
+
+    int type = lexeme_to_type(next_lexeme);
+   // get the variable name
+
+    next_lexeme = lexer_getalphanum(buffer);
+
+    ast_t * node = NULL;
+
+    char next_symbol = buf_getchar_rollback(buffer);
+
+    if(next_symbol != ';' && next_symbol != '='){
+        fprintf(stderr, "Error: missing '=' near %s", next_lexeme);
+        exit(EXIT_FAILURE);
+    }
+    else if(next_symbol == ';'){
+        node = ast_new_declaration(ast_new_variable(next_lexeme, type), NULL);
+    }
+    next_symbol = buf_getchar_after_blank(buffer);
+
+    return ast_list_add(statements_list, node);
+
 }

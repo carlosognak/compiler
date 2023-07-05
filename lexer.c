@@ -47,10 +47,14 @@ long convertStringToLong(char * str){
 }
 
 char *lexer_getalphanum(buffer_t* buffer){
+
     assert((!buf_eof(buffer) && buffer != NULL));
 
+    bool buffer_was_locked_before;
 
-
+    if(buffer->islocked){
+        buffer_was_locked_before = true;
+    }
 
     char *str = malloc(sizeof(char) * 1);
 
@@ -59,7 +63,7 @@ char *lexer_getalphanum(buffer_t* buffer){
     int length = 0;
 
 
-    while(isalnum(buf_char) || buf_char == '_'){
+    while(true){
 
         length++;
 
@@ -67,15 +71,30 @@ char *lexer_getalphanum(buffer_t* buffer){
 
         str[length - 1] = buf_char;
 
-        buf_char = buf_getchar(buffer);
-        if(!isalnum(buf_char)){
-            buffer->it -= 1;
+        if(buffer->islocked){
+            buf_unlock(buffer);
         }
+
+        buf_lock(buffer);
+        buf_char = buf_getchar(buffer);
+
+        if(!isalnum(buf_char) && buf_char != '_'){
+
+            buf_rollback_and_unlock(buffer, 1);
+
+            if(buffer_was_locked_before){
+                buf_lock(buffer);
+            }
+            break;
+        }
+        buf_unlock(buffer);
     }
 
     str[length] = '\0';
     return str;
 }
+
+
 
 /*
  * Function lexer_getalphanum_rollback
@@ -91,11 +110,11 @@ char *lexer_getalphanum(buffer_t* buffer){
 
 char *lexer_getalphanum_rollback(buffer_t* buffer){
 
-    char * str = lexer_getalphanum(buffer);
+    buf_lock(buffer);
 
-    size_t str_length = strlen(str);
+    char *str = lexer_getalphanum(buffer);
 
-    buffer->it -= str_length;
+    buf_rollback_and_unlock(buffer, strlen(str));
 
     return str;
 }

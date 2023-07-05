@@ -1,0 +1,4 @@
+function add(entier a, entier b): rien{
+
+    entier b = abc + b;
+}

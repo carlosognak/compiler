@@ -188,11 +188,12 @@
 	<stdio.h>
 	<stdbool.h>
 
-1688528189 c:\users\ybahamboulaidourah\my-desktop\compiler\utils.h
+1688567042 c:\users\ybahamboulaidourah\my-desktop\compiler\utils.h
 	<stdio.h>
 	<stdbool.h>
+	"ast_struct.h"
 
-1688527627 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.c
+1688571060 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.c
 	"lexer.h"
 	"assert.h"
 	<ctype.h>
@@ -202,10 +203,10 @@
 	<string.h>
 	"buffer.h"
 
-1688467277 c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.h
+1688542349 c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.h
 	"buffer.h"
 
-1688529770 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
+1688568575 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
 	"lexical_analizer.h"
 	"syntax_analyser.h"
 	"ast_struct.h"
@@ -321,13 +322,15 @@
 1688461079 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\test_runner.c
 	"../../exports.h"
 
-1688528723 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
+1688568547 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
 	<stdlib.h>
 	<string.h>
 	<unistd.h>
 	<execinfo.h>
-	"./utils.h"
-	<string.h>
+	"buffer.h"
+	"utils.h"
+	"ast_struct.h"
+	"lexer.h"
 
 1688451961 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_function.c
 	"../../exports.h"

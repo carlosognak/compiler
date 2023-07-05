@@ -14,11 +14,13 @@
 
 #define STREQUAL 0
 #include <stdbool.h>
+#include "ast_struct.h"
 
 int check_lexeme_is_digit_or_error(char* lexeme);
 int check_lexeme_is_keyword_or_error(char *lexeme);
 int check_lexeme_is_valid_type_or_error(char*);
 
+ast_list_t *add_statement_to_list(buffer_t *buffer, ast_list_t **statements_list);
 
 char *copy_name (char *name);
 void print_backtrace ();
@@ -28,6 +30,7 @@ bool is_lexeme_keyword_tanque(char*);
 bool is_lexeme_keyword_si(char*);
 bool is_lexeme_keyword_sinon(char*);
 bool is_allowed_type(char*);
+
 int is_valid_parameter(char*);
 int is_lexeme_empty(char *);
 int lexeme_to_type(char*);

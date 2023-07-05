@@ -213,7 +213,9 @@ ast_t *analyse_function_body(buffer_t *buffer){
 
     char next_symbol = buf_getchar_after_blank(buffer);
 
-    ast_t *expression_node = NULL;
+    ast_t *node = NULL;
+
+    ast_list_t *statements_list = NULL;
 
     if(next_symbol != '{'){
         fprintf(stderr, "Error missing '{' symbol");
@@ -224,9 +226,14 @@ ast_t *analyse_function_body(buffer_t *buffer){
 
     char* nextLexeme;
 
-    while(next_symbol != '}' && buf_eof(buffer) == false){
+    while(true){
 
-        nextLexeme = lexer_getalphanum(buffer);
+        next_symbol = buf_getchar_rollback(buffer);
+
+        if(next_symbol == '}')
+            break;
+
+        nextLexeme = lexer_getalphanum_rollback(buffer);
 
         if(is_lexeme_keyword(nextLexeme) == false){
             fprintf(stderr, "Error: %s unknown keyword.", nextLexeme);
@@ -235,36 +242,17 @@ ast_t *analyse_function_body(buffer_t *buffer){
 
         if(is_lexeme_type_entier(nextLexeme)){
 
-            int type = lexeme_to_type(nextLexeme);
-            // get the variable name
-            nextLexeme = lexer_getalphanum(buffer);
-
-            ast_t *lvalue = ast_new_variable(nextLexeme, type);
+            statements_list = add_statement_to_list(buffer, statements_list);
+        }
+        if(is_lexeme_keyword_si(nextLexeme)){
 
             next_symbol = buf_getchar_after_blank(buffer);
 
-            if(next_symbol != '=' && next_symbol != ';'){
-                fprintf(stderr, "Error: missing '=' or ';' near %s", nextLexeme);
-                exit(EXIT_FAILURE);
+            if(next_symbol != '('){
+               fprintf(stderr, "Error: missing '(' near %s", nextLexeme);
+               exit(EXIT_FAILURE);
             }
-
-            ast_t *rvalue = NULL;
-
-            while(next_symbol != ';'){
-
-                nextLexeme = lexer_getalphanum(buffer);
-                // check the term validity before
-
-                next_symbol = buf_getchar_after_blank(buffer);
-
-                if(next_symbol != '*' && next_symbol != '+' && next_symbol != '/' && next_symbol != '-' && next_symbol != ';'){
-                    fprintf(stderr, "Error: missing operator near %s", nextLexeme);
-                    exit(EXIT_FAILURE);
-                }
-
-
-                fprintf(stderr, "\noperator %c\n", next_symbol);
-            }
+            fprintf(stderr, "%s lexeme is this", nextLexeme);
         }
     }
 
