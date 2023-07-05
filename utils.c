@@ -38,9 +38,9 @@ int check_lexeme_is_digit_or_error(char* lexeme){
     }
     return 0;
 }
-int check_lexeme_is_valid_keyword_or_error(char *lexeme){
-    if(is_lexeme_keyword(lexeme)){
-        fprintf(stderr, "Error: %s cannot be used as a variable name.", lexeme);
+int check_lexeme_is_keyword_or_error(char *lexeme){
+    if(is_lexeme_keyword(lexeme) == false){
+        fprintf(stderr, "Error: %s unknown keyword.", lexeme);
         exit(EXIT_FAILURE);
     }
     return 0;

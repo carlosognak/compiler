@@ -205,7 +205,7 @@
 1688467277 c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.h
 	"buffer.h"
 
-1688528173 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
+1688529770 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
 	"lexical_analizer.h"
 	"syntax_analyser.h"
 	"ast_struct.h"
@@ -213,7 +213,6 @@
 	<stdio.h>
 	<errno.h>
 	<stdlib.h>
-	<stdbool.h>
 
 1688527301 c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.h
 	"ast_struct.h"
@@ -322,7 +321,7 @@
 1688461079 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\test_runner.c
 	"../../exports.h"
 
-1688527134 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
+1688528723 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
 	<stdlib.h>
 	<string.h>
 	<unistd.h>
