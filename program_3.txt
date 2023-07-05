@@ -1,4 +1,4 @@
 function add(entier a, entier b): rien{
-    return a + 12;
+    entier b = a + 12;
 }
 

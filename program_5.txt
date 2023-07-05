@@ -1,0 +1,6 @@
+function add(entier a, entier b): rien{
+
+    entier b = 12 + b;
+    entier c = 234 + 83838;
+
+}

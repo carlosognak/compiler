@@ -3,7 +3,7 @@
 
 TEST_GROUP(new_variable);
 
-ast_t *ast;
+static ast_t *ast;
 
 TEST_SETUP(new_variable){
 

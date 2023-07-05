@@ -243,19 +243,28 @@ char buf_getchar_rollback (buffer_t *buffer)
 
 void buf_print (buffer_t *buffer)
 {
+  char *locked_status;
+  if (buffer->islocked)
+      locked_status = "locked";
+  else
+      locked_status = "unlocked";
+
   printf(COLOR_BLUE "#### <buffer> ####\n" COLOR_DEFAULT);
 #ifdef WIN32
-  printf(COLOR_GREEN "it: %u\nend: %u\navail: %u\nlock: %u\n" COLOR_DEFAULT,
+  printf(COLOR_GREEN "it: %u\nend: %u\navail: %u\nlock: %u (%s)\n" COLOR_DEFAULT,
       buffer->it,
       buffer->end,
       buffer->avail,
-      buffer->lock);
+      buffer->lock,
+      locked_status);
 #else
-  printf(COLOR_GREEN "it: %zu\nend: %zu\navail: %zu\nlock: %zu\n" COLOR_DEFAULT,
+  printf(COLOR_GREEN "it: %zu\nend: %zu\navail: %zu\nlock: %zu (%s)\n" COLOR_DEFAULT,
       buffer->it,
       buffer->end,
       buffer->avail,
-      buffer->lock);
+      buffer->lock,
+      locked_status
+      );
 #endif
   char *color = NULL;
   for (size_t i = 0; i < BUF_SIZE; i++) {

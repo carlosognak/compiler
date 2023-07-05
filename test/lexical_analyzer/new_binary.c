@@ -2,11 +2,11 @@
 
 TEST_GROUP(new_binary);
 
-ast_t *ast;
-ast_t *right;
-ast_t *left;
+static ast_t *ast;
+static ast_t *right;
+static ast_t *left;
 
-ast_binary_e op;
+static ast_binary_e op;
 
 TEST_SETUP(new_binary){
 

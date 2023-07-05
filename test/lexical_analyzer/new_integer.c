@@ -2,7 +2,7 @@
 
 TEST_GROUP(new_integer);
 
-ast_t *ast;
+static ast_t *ast;
 
 TEST_SETUP(new_integer){
 

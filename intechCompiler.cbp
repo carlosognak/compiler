@@ -39,6 +39,7 @@
 		<Unit filename="exports.h" />
 		<Unit filename="intech.txt" />
 		<Unit filename="intech1.txt" />
+		<Unit filename="invalid_returned_type.txt" />
 		<Unit filename="lexer.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -69,6 +70,7 @@
 		<Unit filename="program_2.txt" />
 		<Unit filename="program_3.txt" />
 		<Unit filename="program_4.txt" />
+		<Unit filename="program_5.txt" />
 		<Unit filename="shunting_yard.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -113,6 +115,10 @@
 		</Unit>
 		<Unit filename="test/syntax_analyser/analyse_function.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/syntax_analyser/analyse_function_body.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
 		</Unit>
 		<Unit filename="test/syntax_analyser/analyse_parameters.c">
 			<Option compilerVar="CC" />

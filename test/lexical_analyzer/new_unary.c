@@ -2,11 +2,11 @@
 
 TEST_GROUP(new_unary);
 
-ast_t *ast;
+static ast_t *ast;
 
-ast_t *operand;
+static ast_t *operand;
 
-ast_unary_e op;
+static ast_unary_e op;
 
 TEST_SETUP(new_unary){
 

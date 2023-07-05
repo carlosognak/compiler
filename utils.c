@@ -30,6 +30,28 @@ void print_backtrace ()
   backtrace_symbols_fd(array, size, STDERR_FILENO);
 #endif /* WIN32 */
 }
+
+int check_lexeme_is_digit_or_error(char* lexeme){
+    if(is_lexeme_digit(lexeme)){
+        fprintf(stderr, "Error: %s constant number cannot be used as a variable name.", lexeme);
+        exit(EXIT_FAILURE);
+    }
+    return 0;
+}
+int check_lexeme_is_valid_keyword_or_error(char *lexeme){
+    if(is_lexeme_keyword(lexeme)){
+        fprintf(stderr, "Error: %s cannot be used as a variable name.", lexeme);
+        exit(EXIT_FAILURE);
+    }
+    return 0;
+}
+int check_lexeme_is_valid_type_or_error(char* lexeme){
+    if(is_allowed_type(lexeme) == false){
+        fprintf(stderr, "Error: %s is not a valid type.",lexeme);
+        exit(EXIT_FAILURE);
+    }
+    return 0;
+}
 bool is_lexeme_keyword(char *lexeme){
     if(is_lexeme_type_entier(lexeme))
         return true;
@@ -71,9 +93,7 @@ int is_lexeme_empty(char* lexeme){
         return 1;
     return 0;
 }
-int is_valid_parameter(char *lexeme){
 
-}
 bool is_lexeme_digit(char *lexeme){
     for(int i = 0; i < strlen(lexeme); i++){
         if(isdigit(lexeme[i]) == false)
@@ -102,7 +122,7 @@ bool is_lexeme_keyword_si(char *lexeme){
 }
 bool is_lexeme_keyword_sinon(char* lexeme){
     if(strcmp(lexeme, "sinon") == 0)
-        return true
+        return true;
 
     return false;
 }

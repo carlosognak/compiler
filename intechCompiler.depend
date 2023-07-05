@@ -177,7 +177,7 @@
 1686870308 source:c:\users\ybahamboulaidourah\my-desktop\compiler\intechcompiler\test\lexical_analyzer\ast_list_add.c
 	"../../exports.h"
 
-1688041924 source:c:\users\ybahamboulaidourah\my-desktop\compiler\buffer.c
+1688463811 source:c:\users\ybahamboulaidourah\my-desktop\compiler\buffer.c
 	<stdlib.h>
 	<string.h>
 	<assert.h>
@@ -188,32 +188,34 @@
 	<stdio.h>
 	<stdbool.h>
 
-1688401320 c:\users\ybahamboulaidourah\my-desktop\compiler\utils.h
+1688528189 c:\users\ybahamboulaidourah\my-desktop\compiler\utils.h
 	<stdio.h>
 	<stdbool.h>
 
-1688050657 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.c
+1688527627 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.c
 	"lexer.h"
 	"assert.h"
 	<ctype.h>
 	<stdlib.h>
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"buffer.h"
 
-1688041925 c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.h
+1688467277 c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.h
 	"buffer.h"
 
-1688458910 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
+1688528173 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
 	"lexical_analizer.h"
 	"syntax_analyser.h"
 	"ast_struct.h"
+	"utils.h"
 	<stdio.h>
 	<errno.h>
 	<stdlib.h>
 	<stdbool.h>
 
-1688055578 c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.h
+1688527301 c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.h
 	"ast_struct.h"
 	"buffer.h"
 
@@ -263,7 +265,7 @@
 	<string.h>
 	<stdlib.h>
 
-1688452047 source:c:\users\ybahamboulaidourah\my-desktop\compiler\main.c
+1688461114 source:c:\users\ybahamboulaidourah\my-desktop\compiler\main.c
 	"exports.h"
 
 1688331497 c:\users\ybahamboulaidourah\my-desktop\compiler\exports.h
@@ -287,7 +289,7 @@
 1688049107 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexers\get_alphanum.c
 	"../../exports.h"
 
-1688041925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexers\get_alphanum_rollback.c
+1688467845 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexers\get_alphanum_rollback.c
 	"../../exports.h"
 
 1688050200 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexers\get_number.c
@@ -296,31 +298,31 @@
 1688041925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexers\test_runner.c
 	"../../exports.h"
 
-1688041925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_binary.c
+1688467949 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_binary.c
 	"../../exports.h"
 
-1688042054 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_function.c
+1688467949 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_function.c
 	"../../exports.h"
 
-1688041925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_integer.c
+1688467898 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_integer.c
 	"../../exports.h"
 
-1688041925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_unary.c
+1688467949 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_unary.c
 	"../../exports.h"
 
-1688041925 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_variable.c
+1688467898 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\new_variable.c
 	"../../exports.h"
 
 1688047592 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\test_runner.c
 	"../../exports.h"
 
-1688456771 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_parameters.c
+1688466029 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_parameters.c
 	"../../exports.h"
 
-1688457030 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\test_runner.c
+1688461079 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\test_runner.c
 	"../../exports.h"
 
-1688458590 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
+1688527134 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
 	<stdlib.h>
 	<string.h>
 	<unistd.h>
@@ -331,13 +333,16 @@
 1688451961 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_function.c
 	"../../exports.h"
 
-1688457056 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_returned_type.c
+1688467982 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_returned_type.c
 	"../../exports.h"
 
-1688042054 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\ast_list_add.c
+1688467949 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\ast_list_add.c
 	"../../exports.h"
 
 1688331631 c:\users\ybahamboulaidourah\my-desktop\compiler\syntax_analyser.h
 	"buffer.h"
 	"ast_struct.h"
+
+1688478180 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_function_body.c
+	"../../exports.h"
 

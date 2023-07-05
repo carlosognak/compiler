@@ -30,3 +30,8 @@ TEST_GROUP_RUNNER(analyse_returned_type){
     RUN_TEST_CASE(analyse_returned_type, test_returned_type_equals_entier);
     //RUN_TEST_CASE(analyse_returned_type, test_invalid_returned_type_error);
 }
+TEST_GROUP(test_group_function_body);
+TEST_GROUP_RUNNER(test_group_function_body){
+
+   RUN_TEST_CASE(test_group_function_body, test_function_body_is_not_empty)
+}

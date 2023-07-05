@@ -15,6 +15,11 @@
 #define STREQUAL 0
 #include <stdbool.h>
 
+int check_lexeme_is_digit_or_error(char* lexeme);
+int check_lexeme_is_keyword_or_error(char *lexeme);
+int check_lexeme_is_valid_type_or_error(char*);
+
+
 char *copy_name (char *name);
 void print_backtrace ();
 bool is_lexeme_keyword(char *lexeme);
@@ -27,5 +32,7 @@ int is_valid_parameter(char*);
 int is_lexeme_empty(char *);
 int lexeme_to_type(char*);
 bool is_lexeme_digit(char*);
+
+
 
 #endif /* ifndef UTILS_H */

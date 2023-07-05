@@ -3,8 +3,8 @@
 
 TEST_GROUP(alphanum_rollback);
 
-FILE* fp;
-buffer_t buffer;
+static FILE* fp;
+static buffer_t buffer;
 
 TEST_SETUP(alphanum_rollback){
     fp = fopen("intech.txt", "r+");

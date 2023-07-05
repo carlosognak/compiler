@@ -8,9 +8,9 @@ static buffer_t buffer;
 static ast_list_t *params_list;
 static char *lexeme;
 
-char second_function[] = "function add(entier a, entier b): entier { }";
+static char second_function[] = "function add(entier a, entier b): entier { }";
 
-int returned_type;
+static int returned_type;
 
 TEST_SETUP(analyse_returned_type){
 

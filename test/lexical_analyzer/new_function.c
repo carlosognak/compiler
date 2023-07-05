@@ -2,11 +2,11 @@
 
 TEST_GROUP(new_function);
 
-ast_t *ast;
-char *name;
-int returned_type;
-ast_list_t *params;
-ast_list_t *stmts;
+static ast_t *ast;
+static char *name;
+static int returned_type;
+static ast_list_t *params;
+static ast_list_t *stmts;
 
 TEST_SETUP(new_function){
 

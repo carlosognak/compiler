@@ -2,10 +2,10 @@
 
 TEST_GROUP(ast_list_add);
 
-ast_t *first_variable;
-ast_t *second_variable;
+static ast_t *first_variable;
+static ast_t *second_variable;
 
-ast_list_t *param_list;
+static ast_list_t *param_list;
 
 TEST_SETUP(ast_list_add){
 

@@ -2,10 +2,12 @@
 #include "syntax_analyser.h"
 
 #include "ast_struct.h"
+#include "utils.h"
+
 #include <stdio.h>
 #include <errno.h>
 #include <stdlib.h>
-#include <stdbool.h>
+
 
 
 ast_t *ast_new_integer(long val){
@@ -162,17 +164,15 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
     char next_char = buf_getchar_after_blank(buffer);
 
     if(next_char != '('){
-        fprintf(stderr, "missing '(' after function name", strerror(errno));
+        fprintf(stderr, "missing '(' after function name");
         exit(EXIT_FAILURE);
     }
-
-    char *next_lexeme = NULL;
 
     bool result;
 
     while(next_char != ')'){
 
-        next_lexeme = lexer_getalphanum(buffer);
+        char* next_lexeme = lexer_getalphanum(buffer);
 
         result = is_allowed_type(next_lexeme);
 
@@ -213,31 +213,41 @@ ast_t *analyse_function_body(buffer_t *buffer){
 
     char next_symbol = buf_getchar_after_blank(buffer);
 
-    if(next_symbol != "{"){
+    if(next_symbol != '{'){
         fprintf(stderr, "Error missing '{' symbol");
         exit(EXIT_FAILURE);
     }
 
     ast_t *ast_function_body_node = NULL;
 
-    char* next_lexeme = NULL;
+    char* nextLexeme;
 
-    while(next_symbol != '}'){
+    while(next_symbol != '}' && buf_eof(buffer) == false){
 
-        next_lexeme = lexer_getalphanum(buffer);
+        nextLexeme = lexer_getalphanum(buffer);
 
-        if(is_lexeme_keyword(next_lexeme) == false){
-            fprintf(stderr, "Error: %s is not a valid keyword.", next_lexeme);
+        check_lexeme_is_keyword_or_error(nextLexeme);
+
+        check_lexeme_is_valid_type_or_error(nextLexeme);
+
+        nextLexeme = lexer_getalphanum(buffer);
+
+        check_lexeme_is_keyword_or_error(nextLexeme);
+
+        check_lexeme_is_digit_or_error(nextLexeme);
+
+        next_symbol = buf_getchar_after_blank(buffer);
+
+        if(next_symbol != '=' && next_symbol != ';'){
+            fprintf(stderr, "Error: missing '=' or ';' near %s.", nextLexeme);
             exit(EXIT_FAILURE);
         }
 
-        else if(is_allowed_type(next_lexeme) == false){
-            fprintf(stderr, "Error: %s is not a valid type.", next_lexeme);
-            exit(EXIT_FAILURE);
-        }
+        nextLexeme = lexer_getalphanum(buffer);
 
-        else if(is_lexeme_type_entier(lexeme)){
-
+        while(!buf_eof(buffer)){
+            fprintf(stderr, "\nsuccess: %s\n", nextLexeme);
+            nextLexeme = lexer_getalphanum(buffer);
         }
     }
 

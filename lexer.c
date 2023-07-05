@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "buffer.h"
 
 /*
@@ -46,8 +47,10 @@ long convertStringToLong(char * str){
 }
 
 char *lexer_getalphanum(buffer_t* buffer){
-
     assert((!buf_eof(buffer) && buffer != NULL));
+
+
+
 
     char *str = malloc(sizeof(char) * 1);
 
