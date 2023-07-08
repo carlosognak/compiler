@@ -1,4 +1,9 @@
-#include "../../exports.h"
+#include <stdio.h>
+
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../lexer.h"
+#include "../../buffer.h"
 
 
 TEST_GROUP(alphanum_rollback);
@@ -7,10 +12,10 @@ static FILE* fp;
 static buffer_t buffer;
 
 TEST_SETUP(alphanum_rollback){
-    fp = fopen("intech.txt", "r+");
+    fp = fopen("./programs/intech.txt", "r+");
 
     if(fp == NULL){
-        printf("Could not read the file");
+        printf("Could not read the file intech.txt for test_group_alphanum_rollback");
         exit(1);
     }
     buf_init(&buffer, fp);

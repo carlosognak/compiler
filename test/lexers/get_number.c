@@ -1,5 +1,9 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../lexer.h"
+#include "../../buffer.h"
 
+#include <stdio.h>
 
 TEST_GROUP(number);
 
@@ -9,10 +13,10 @@ buffer_t buffer;
 
 TEST_SETUP(number){
 
-    fp = fopen("number.txt", "r+");
+    fp = fopen("./programs/number.txt", "r+");
 
     if(fp == NULL){
-        printf("Could not read the file in write mode");
+        printf("Could not read the file number.txt for test_group_lexer_getnumber");
         exit(1);
     }
     buf_init(&buffer, fp);

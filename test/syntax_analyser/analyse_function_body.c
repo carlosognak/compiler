@@ -1,4 +1,13 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../syntax_analyzer.h"
+#include "../../lexer.h"
+#include "../../buffer.h"
+#include "../../ast_struct.h"
+#include <stdio.h>
+
+
+
 
 TEST_GROUP(test_group_function_body);
 
@@ -15,9 +24,9 @@ static int returned_type;
 
 TEST_SETUP(test_group_function_body){
 
-    fp = fopen("program_5.txt", "r");
+    fp = fopen("./programs/program_5.txt", "r");
     if(fp == NULL){
-        printf("Could not read the file program_5.txt");
+        printf("Could not read the file program_5.txt for test_group_function_body");
         exit(1);
     }
     buf_init(&buffer, fp);

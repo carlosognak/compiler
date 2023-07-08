@@ -1,18 +1,24 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../syntax_analyzer.h"
+#include "../../lexer.h"
+#include "../../buffer.h"
+#include "../../ast_struct.h"
+#include <stdio.h>
+
 
 TEST_GROUP(test_group_analyse_parameter);
 
 static FILE* fp;
 static buffer_t buffer;
-
 static ast_list_t *params_list;
 
 
 TEST_SETUP(test_group_analyse_parameter){
 
-    fp = fopen("program_1.txt", "r");
+    fp = fopen("./programs/program_1.txt", "r");
     if(fp == NULL){
-        printf("Could not read the file");
+        printf("Could not read the file program_1.txt for test_group_analyse_parameter");
         exit(1);
     }
     buf_init(&buffer, fp);
@@ -95,10 +101,10 @@ TEST(test_group_analyse_parameter, test_third_param_type_is_entier){
 }
 TEST(test_group_analyse_parameter, test_function_with_two_parameters){
 
-    fp = fopen("program_2.txt", "r");
+    fp = fopen("./programs/program_2.txt", "r");
 
     if(fp == NULL){
-        printf("Could not read the file");
+        printf("Could not read the file program_2.txt for test_group_analyse_parameter");
         exit(1);
     }
     buf_init(&buffer, fp);

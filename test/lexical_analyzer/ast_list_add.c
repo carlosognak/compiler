@@ -1,4 +1,9 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../lexer.h"
+#include "../../lexical_analizer.h"
+
+#include <stdio.h>
 
 TEST_GROUP(ast_list_add);
 

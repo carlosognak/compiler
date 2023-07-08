@@ -1,4 +1,5 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
 
 TEST_GROUP(alphanum);
 

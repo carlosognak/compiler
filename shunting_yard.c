@@ -1,41 +1,48 @@
 #include "shunting_yard.h"
+#include "stack.h"
 
-
-int getPriority(char c){
-    if(c == "+" ||c == "-")
+int get_precedence(char ch){
+    if (ch == '+' || ch == '-')
         return 1;
-
-    else if(c == "*" || c == "/")
+    else if (ch == '*' || ch == '/')
         return 2;
+    else if (ch == '^')
+        return 3;
     else
-        return 0;
+        return -1;
+}
+/*
+bool has_left_associativity(char ch){
+    if(ch == '+' || ch == '-' || ch == '/' || ch == '*') {
+        return true;
+    }
+    return false;
 }
 
-char *convertPriority(char *input){
-    char stack[100];
-    char output[100];
-    int top = -1;
-    int i = 0;
-    int j = 0;
+char *infix_to_reverse_polish_notation(buffer_t *buffer){
 
-    stack[++top] = '\0';
+    char next_symbole = buf_getchar_after_blank(buffer);
 
-    while(1){
+    while(true){
 
-        if(input[i] == '\0' && stack[top] == '\0') // all chars processed
+        if(next_symbole == ';')
             break;
 
-        if(input[i] == '\0' || getPriority(stack[top] < getPriority(input[i]))){
-            stack[++top] = input[i++];
+        else if(next_symbole == ')')
+            push(next_symbole);
+
+        else if(next_symbole == ')'){
+            while(!isempty() && peek() != '(')
+                // output += pop()
+
+            //pop();
+
         }
-        else{
-            while(getPriority(stack[top]) >= getPriority(input[i])){
-                output[j++] = stack[top++];
-            }
-        }
+        // If an operator is encountered then taken the
+        // further action based on the precedence of the
+            // operator
+
+
     }
-
-    output[j] = '\0';
-
-    return strdup(output);
 }
+*/

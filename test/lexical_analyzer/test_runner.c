@@ -1,4 +1,5 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
 
 TEST_GROUP(new_integer);
 
@@ -39,4 +40,22 @@ TEST_GROUP_RUNNER(ast_list_add){
     RUN_TEST_CASE(ast_list_add,test_param_list_not_null);
     RUN_TEST_CASE(ast_list_add, test_parameter_type);
     RUN_TEST_CASE(ast_list_add, test_parameter_name);
+}
+TEST_GROUP(test_group_new_symbol);
+TEST_GROUP_RUNNER(test_group_new_symbol){
+    RUN_TEST_CASE(test_group_new_symbol,test_new_symbol_created);
+    RUN_TEST_CASE(test_group_new_symbol,test_new_symbol_name_equals_totalComputer);
+    RUN_TEST_CASE(test_group_new_symbol,test_new_symbol_name_type_is_one);
+}
+TEST_GROUP(test_group_add_symbol);
+TEST_GROUP_RUNNER(test_group_add_symbol){
+    RUN_TEST_CASE(test_group_add_symbol, test_table_head_not_null);
+    RUN_TEST_CASE(test_group_add_symbol, test_table_next_symbol_not_null);
+    RUN_TEST_CASE(test_group_add_symbol, test_table_next_data_not_null);
+    RUN_TEST_CASE(test_group_add_symbol, test_table_next_data_name_equals_totalComputer);
+    RUN_TEST_CASE(test_group_add_symbol, test_table_next_has_changed);
+}
+TEST_GROUP(test_group_search_symbol);
+TEST_GROUP_RUNNER(test_group_search_symbol){
+    RUN_TEST_CASE(test_group_search_symbol,test_symbol_found_within_the_table);
 }

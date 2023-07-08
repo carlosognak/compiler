@@ -1,4 +1,7 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../lexer.h"
+#include "../../lexical_analizer.h"
 
 
 TEST_GROUP(new_variable);

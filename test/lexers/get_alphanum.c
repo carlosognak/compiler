@@ -1,4 +1,10 @@
-#include "../../exports.h"
+#include <stdio.h>
+
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
+#include "../../buffer.h"
+
+
 
 TEST_GROUP(alphanum);
 
@@ -7,9 +13,9 @@ static buffer_t buffer;
 
 TEST_SETUP(alphanum){
 
-    fp = fopen("intech.txt", "r");
+    fp = fopen("./programs/intech.txt", "r");
     if(fp == NULL){
-        printf("Could not read the file");
+        printf("Could not read the file intech.txt for test_group_alphanum");
         exit(1);
     }
     buf_init(&buffer, fp);
@@ -48,9 +54,9 @@ TEST(alphanum, test_iterator_has_moved){
 }
 
 TEST(alphanum, test_alphanum_with_underscore){
-    fp = fopen("intech1.txt", "r");
+    fp = fopen("./programs/intech1.txt", "r");
     if(fp == NULL){
-        printf("Could not read the file intech1.txt");
+        printf("Could not read the file intech1.txt for test_group_alphanum");
         exit(1);
     }
     buf_init(&buffer, fp);
@@ -59,10 +65,10 @@ TEST(alphanum, test_alphanum_with_underscore){
 
 TEST(alphanum, test_alphanum_is_a_number){
 
-   fp = fopen("variable_with_number.txt", "r+");
+   fp = fopen("./programs/variable_with_number.txt", "r+");
 
     if(fp == NULL){
-        printf("Could not read the file variable_with_number.txt");
+        printf("Could not read the file variable_with_number.txt test_group_alphanum");
         exit(1);
     }
 

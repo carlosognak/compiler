@@ -1,4 +1,5 @@
-#include "../../exports.h"
+#include "../../lib/unity_fixture.h"
+#include "../../lib/unity.h"
 
 TEST_GROUP(test_group_analyse_parameter);
 
@@ -28,7 +29,6 @@ TEST_GROUP_RUNNER(analyse_returned_type){
 
     RUN_TEST_CASE(analyse_returned_type, test_returned_type_equals_rien);
     RUN_TEST_CASE(analyse_returned_type, test_returned_type_equals_entier);
-    //RUN_TEST_CASE(analyse_returned_type, test_invalid_returned_type_error);
 }
 TEST_GROUP(test_group_function_body);
 TEST_GROUP_RUNNER(test_group_function_body){

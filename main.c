@@ -13,6 +13,9 @@ static void runAllTest(void){
     RUN_TEST_GROUP(new_binary);
     RUN_TEST_GROUP(new_unary);
     RUN_TEST_GROUP(ast_list_add);
+    RUN_TEST_GROUP(test_group_new_symbol);
+    RUN_TEST_GROUP(test_group_add_symbol);
+    RUN_TEST_GROUP(test_group_search_symbol);
 
     // syntax analyzer test runner group
     RUN_TEST_GROUP(test_group_analyse_parameter);
@@ -20,6 +23,7 @@ static void runAllTest(void){
     RUN_TEST_GROUP(analyse_returned_type);
 
     RUN_TEST_GROUP(test_group_function_body);
+
 }
 
 int main(int argc, char * argv[])

@@ -15,6 +15,7 @@
 #define STREQUAL 0
 #include <stdbool.h>
 #include "ast_struct.h"
+#include "buffer.h"
 
 int check_lexeme_is_digit_or_error(char* lexeme);
 int check_lexeme_is_keyword_or_error(char *lexeme);
