@@ -1,4 +1,6 @@
-function add(entier a, entier b): rien{
+
+
+fonction add(entier a, entier b): rien{
 
     entier b;
     entier c;

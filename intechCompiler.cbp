@@ -121,6 +121,9 @@
 		<Unit filename="test/lexical_analyzer/new_variable.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/lexical_analyzer/remove_symbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/lexical_analyzer/search_symbol.c">
 			<Option compilerVar="CC" />
 		</Unit>

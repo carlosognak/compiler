@@ -8,7 +8,7 @@ typedef struct symbol_t{
     char *name;
     int type;
     struct symbol_t *next;
-    struct symbol_t *data;
+    //struct symbol_t *data;
     ast_t *attributes;
 }symbol_t;
 

@@ -58,4 +58,11 @@ TEST_GROUP_RUNNER(test_group_add_symbol){
 TEST_GROUP(test_group_search_symbol);
 TEST_GROUP_RUNNER(test_group_search_symbol){
     RUN_TEST_CASE(test_group_search_symbol,test_symbol_found_within_the_table);
+    RUN_TEST_CASE(test_group_search_symbol,test_totalDevice_symbol_found_in_table);
+    RUN_TEST_CASE(test_group_search_symbol,test_symbol_does_not_exist_true);
+}
+TEST_GROUP(test_group_remove_symbol);
+TEST_GROUP_RUNNER(test_group_remove_symbol){
+    RUN_TEST_CASE(test_group_remove_symbol, test_symbol_total_computer_successfully_removed);
+    RUN_TEST_CASE(test_group_remove_symbol,test_symbol_all_symbol_got_deleted);
 }

@@ -2,14 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="utils.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="buffer.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="361" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="lib\unity_fixture.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3124" topLine="95" />
+			<Cursor1 position="1242" topLine="20" />
 		</Cursor>
 	</File>
 	<File name="utils.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,24 +12,14 @@
 			<Cursor1 position="3375" topLine="141" />
 		</Cursor>
 	</File>
-	<File name="test\syntax_analyser\test_runner.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="lib\unity_fixture.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1489" topLine="17" />
+			<Cursor1 position="3124" topLine="95" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="shunting_yard.c" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="892" topLine="11" />
-		</Cursor>
-	</File>
-	<File name="test\lexical_analyzer\test_runner.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2391" topLine="39" />
-		</Cursor>
-	</File>
-	<File name="lexer.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1422" topLine="75" />
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="test\syntax_analyser\analyse_parameters.c" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,9 +27,9 @@
 			<Cursor1 position="206" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="test\syntax_analyser\analyse_function.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="buffer.c" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="206" topLine="26" />
+			<Cursor1 position="894" topLine="28" />
 		</Cursor>
 	</File>
 	<File name="test\lexical_analyzer\new_unary.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -52,14 +37,49 @@
 			<Cursor1 position="129" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="test\lexers\test_runner.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="symbol_t.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="93" topLine="0" />
+			<Cursor1 position="200" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="lib\unity_internals.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\syntax_analyser\analyse_function_body.c" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="30805" topLine="852" />
+			<Cursor1 position="206" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="stack.c" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="168" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\lexers\get_number.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="123" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\lexical_analyzer\new_variable.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1011" topLine="20" />
+		</Cursor>
+	</File>
+	<File name="lib\unity_fixture.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1255" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="ast_struct.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2508" topLine="107" />
+		</Cursor>
+	</File>
+	<File name="lib\unity.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41036" topLine="316" />
+		</Cursor>
+	</File>
+	<File name="test\lexical_analyzer\remove_symbol.c" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="804" topLine="12" />
 		</Cursor>
 	</File>
 	<File name="test\lexers\get_alphanum.c" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -67,9 +87,34 @@
 			<Cursor1 position="20" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="lib\unity.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="symbol_t.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="41036" topLine="316" />
+			<Cursor1 position="1258" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="test\syntax_analyser\analyse_function.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="206" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="utils.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="361" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="shunting_yard.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="209" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\syntax_analyser\test_runner.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1489" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="lexer.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1422" topLine="75" />
 		</Cursor>
 	</File>
 	<File name="test\syntax_analyser\analyse_returned_type.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -79,57 +124,7 @@
 	</File>
 	<File name="lexical_analizer.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2773" topLine="107" />
-		</Cursor>
-	</File>
-	<File name="test\lexical_analyzer\new_binary.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="129" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="symbol_t.c" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1513" topLine="57" />
-		</Cursor>
-	</File>
-	<File name="test\lexical_analyzer\search_symbol.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="792" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="test\lexical_analyzer\ast_list_add.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="151" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="stack.c" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="168" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="exports.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="103" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="shunting_yard.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="209" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="symbol_t.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="205" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="shunting_yard.c" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\lexers\get_alphanum_rollback.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="20" topLine="0" />
+			<Cursor1 position="2773" topLine="100" />
 		</Cursor>
 	</File>
 	<File name="lexer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -137,29 +132,9 @@
 			<Cursor1 position="270" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="lexical_analizer.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\lexical_analyzer\test_runner.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="35" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="buffer.c" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="894" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="test\lexical_analyzer\add_symbol.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="54" />
-		</Cursor>
-	</File>
-	<File name="test\lexical_analyzer\new_variable.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1011" topLine="20" />
-		</Cursor>
-	</File>
-	<File name="buffer.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1242" topLine="20" />
+			<Cursor1 position="2739" topLine="46" />
 		</Cursor>
 	</File>
 	<File name="syntax_analyzer.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -167,34 +142,64 @@
 			<Cursor1 position="5066" topLine="189" />
 		</Cursor>
 	</File>
-	<File name="test\lexers\get_number.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\lexers\test_runner.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="123" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="lib\unity_fixture.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="728" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="ast_struct.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2508" topLine="114" />
-		</Cursor>
-	</File>
-	<File name="test\syntax_analyser\analyse_function_body.c" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="206" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="syntax_analyzer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="270" topLine="0" />
+			<Cursor1 position="93" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="stack.h" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="314" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\lexical_analyzer\add_symbol.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2145" topLine="46" />
+		</Cursor>
+	</File>
+	<File name="test\lexical_analyzer\search_symbol.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="470" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="lib\unity_internals.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="30805" topLine="852" />
+		</Cursor>
+	</File>
+	<File name="test\lexical_analyzer\new_binary.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="129" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="exports.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="103" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="test\lexical_analyzer\ast_list_add.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="151" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="lexical_analizer.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="35" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\lexers\get_alphanum_rollback.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="20" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="602" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="syntax_analyzer.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="270" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

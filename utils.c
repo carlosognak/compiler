@@ -10,6 +10,8 @@
 #include "utils.h"
 #include "ast_struct.h"
 #include "lexer.h"
+#include <stdlib.h>
+#include <ctype.h>
 
 
 char *copy_name (char *name)
@@ -143,7 +145,8 @@ ast_list_t *add_statement_to_list(buffer_t *buffer, ast_list_t **statements_list
 
     next_lexeme = lexer_getalphanum(buffer);
 
-    ast_t * node = NULL;
+    ast_t * variable_node = NULL;
+    ast_t * declaration_node = NULL;
 
     char next_symbol = buf_getchar_rollback(buffer);
 
@@ -152,10 +155,17 @@ ast_list_t *add_statement_to_list(buffer_t *buffer, ast_list_t **statements_list
         exit(EXIT_FAILURE);
     }
     else if(next_symbol == ';'){
-        node = ast_new_declaration(ast_new_variable(next_lexeme, type), NULL);
+        variable_node = ast_new_variable(next_lexeme, type);
+        if(variable_node == NULL){
+            fprintf(stderr, "Error: variable node could not be created for: %s", next_lexeme);
+            exit(EXIT_FAILURE);
+        }
+        declaration_node = ast_new_declaration(variable_node,NULL);
     }
     next_symbol = buf_getchar_after_blank(buffer);
 
-    return ast_list_add(statements_list, node);
+    statements_list = ast_list_add(&statements_list, declaration_node);
+
+    return statements_list;
 
 }

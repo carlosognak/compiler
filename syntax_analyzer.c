@@ -1,12 +1,14 @@
 #include <stdbool.h>
 #include <string.h>
 #include <errno.h>
-#include <stdlib.h>  // <cstdlib> en C++
+#include <stdlib.h>
+#include <ctype.h>  // <cstdlib> en C++
 
 #include "utils.h"
 #include "syntax_analyzer.h"
 #include "lexer.h"
 #include "lexical_analizer.h"
+
 
 
 
@@ -19,7 +21,7 @@ ast_t *analyse_function(buffer_t *buffer){
     // if lexeme  is not function terminate the program
     char *function_name = lexer_getalphanum(buffer); // main
 
-    ast_list_t *stmts_list = NULL;
+    ast_list_t *statement_list = NULL;
 
     // analyze function name must be done here
 
@@ -32,7 +34,9 @@ ast_t *analyse_function(buffer_t *buffer){
         exit(EXIT_FAILURE);
     }
 
-    ast = ast_new_function(function_name, returned_type, list_of_params, stmts_list);
+    statement_list = analyse_function_body(buffer);
+
+    ast = ast_new_function(function_name, returned_type, list_of_params, statement_list);
 
     return ast;
 }
@@ -77,7 +81,7 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 
             ast_parameter_node = ast_new_variable(next_lexeme, parameter_type);
 
-            params_list = ast_list_add(params_list, ast_parameter_node);
+            params_list = ast_list_add(&params_list, ast_parameter_node);
 
             next_char = buf_getchar(buffer);
         }
@@ -90,11 +94,9 @@ ast_list_t *analyse_parameters(buffer_t *buffer){
 
 }
 
-ast_t *analyse_function_body(buffer_t *buffer){
+ast_list_t *analyse_function_body(buffer_t *buffer){
 
     char next_symbol = buf_getchar_after_blank(buffer);
-
-    ast_t *node = NULL;
 
     ast_list_t *statements_list = NULL;
 
@@ -103,16 +105,16 @@ ast_t *analyse_function_body(buffer_t *buffer){
         exit(EXIT_FAILURE);
     }
 
-    ast_t *ast_function_body_node = NULL;
-
     char* nextLexeme;
 
     while(true){
 
         next_symbol = buf_getchar_rollback(buffer);
 
-        if(next_symbol == '}')
-            break;
+        if(next_symbol == '}'){
+             buf_getchar_after_blank(buffer);
+             break;
+        }
 
         nextLexeme = lexer_getalphanum_rollback(buffer);
 
@@ -123,7 +125,7 @@ ast_t *analyse_function_body(buffer_t *buffer){
 
         else if(is_lexeme_type_entier(nextLexeme)){
 
-            statements_list = add_statement_to_list(buffer, statements_list);
+            statements_list = add_statement_to_list(buffer, &statements_list);
         }
         else if(is_lexeme_keyword_si(nextLexeme)){
 
@@ -133,11 +135,10 @@ ast_t *analyse_function_body(buffer_t *buffer){
                fprintf(stderr, "Error: missing '(' near %s", nextLexeme);
                exit(EXIT_FAILURE);
             }
-            fprintf(stderr, "%s lexeme is this", nextLexeme);
         }
     }
 
-    return ast_function_body_node;
+    return statements_list;
 }
 
 int analyse_returned_type(buffer_t *buffer){
@@ -192,7 +193,7 @@ int parser(buffer_t *buffer){
         next_lexeme= lexer_getalphanum(buffer);
 
         if(strcmp(next_lexeme, "fonction") == 1){
-            fprintf(stderr, "Error: invalid keyword encountered %s", next_lexeme);
+            fprintf(stderr, "Error: unknown symbol : %s", next_lexeme);
             exit(EXIT_FAILURE);
         }
         else if(strcmp(next_lexeme, "fonction") == 0){

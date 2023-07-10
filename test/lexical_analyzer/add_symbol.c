@@ -45,7 +45,7 @@ TEST(test_group_add_symbol, test_table_next_data_not_null){
 
     TEST_ASSERT_NOT_NULL(head);
     TEST_ASSERT_NOT_NULL(head->next);
-    TEST_ASSERT_NOT_NULL(head->next->data);
+    TEST_ASSERT_NOT_NULL(head->next->name);
 }
 TEST(test_group_add_symbol, test_table_next_data_name_equals_totalComputer){
 
@@ -56,21 +56,20 @@ TEST(test_group_add_symbol, test_table_next_data_name_equals_totalComputer){
 
     TEST_ASSERT_NOT_NULL(head);
     TEST_ASSERT_NOT_NULL(head->next);
-    TEST_ASSERT_NOT_NULL(head->next->data);
-    TEST_ASSERT_EQUAL("totalComputer", head->next->data->name);
+    TEST_ASSERT_EQUAL("totalComputer", head->next->name);
 }
 TEST(test_group_add_symbol, test_table_next_has_changed){
 
     ast_variable = ast_new_variable("totalComputer",1);
 
     sym_add(&head, sym_new("totalComputer", 1, ast_variable));
-    TEST_ASSERT_NOT_NULL(head->next->data);
-    TEST_ASSERT_EQUAL("totalComputer", head->data->name);
+    TEST_ASSERT_NOT_NULL(head->next);
+    TEST_ASSERT_EQUAL("totalComputer", head->name);
 
 
     sym_add(&head, sym_new("totalPhone", 2, ast_variable));
-    TEST_ASSERT_EQUAL_STRING("totalPhone", head->data->name);
+    TEST_ASSERT_EQUAL_STRING("totalPhone", head->name);
 
     sym_add(&head, sym_new("totalDevice", 2, ast_variable));
-    TEST_ASSERT_EQUAL_STRING("totalDevice", head->data->name);
+    TEST_ASSERT_EQUAL_STRING("totalDevice", head->name);
 }

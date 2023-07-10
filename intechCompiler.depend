@@ -194,7 +194,7 @@
 	"ast_struct.h"
 	"buffer.h"
 
-1688571060 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.c
+1689000593 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.c
 	"lexer.h"
 	"assert.h"
 	<ctype.h>
@@ -207,7 +207,7 @@
 1688542349 c:\users\ybahamboulaidourah\my-desktop\compiler\lexer.h
 	"buffer.h"
 
-1688642760 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
+1689028637 source:c:\users\ybahamboulaidourah\my-desktop\compiler\lexical_analizer.c
 	"lexical_analizer.h"
 	"syntax_analyzer.h"
 	"ast_struct.h"
@@ -266,8 +266,9 @@
 	<string.h>
 	<stdlib.h>
 
-1688800026 source:c:\users\ybahamboulaidourah\my-desktop\compiler\main.c
-	"exports.h"
+1689000306 source:c:\users\ybahamboulaidourah\my-desktop\compiler\main.c
+	<stdio.h>
+	"syntax_analyzer.h"
 
 1688642790 c:\users\ybahamboulaidourah\my-desktop\compiler\exports.h
 	<stdio.h>
@@ -344,7 +345,7 @@
 	"../../lexer.h"
 	"../../lexical_analizer.h"
 
-1688799999 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\test_runner.c
+1688984141 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\test_runner.c
 	"../../lib/unity_fixture.h"
 	"../../lib/unity.h"
 
@@ -357,11 +358,11 @@
 	"../../ast_struct.h"
 	<stdio.h>
 
-1688646371 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\test_runner.c
+1688999652 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\test_runner.c
 	"../../lib/unity_fixture.h"
 	"../../lib/unity.h"
 
-1688568547 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
+1689027906 source:c:\users\ybahamboulaidourah\my-desktop\compiler\utils.c
 	<stdlib.h>
 	<string.h>
 	<unistd.h>
@@ -370,6 +371,8 @@
 	"utils.h"
 	"ast_struct.h"
 	"lexer.h"
+	<stdlib.h>
+	<ctype.h>
 
 1688645208 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\analyse_function.c
 	"../../lib/unity_fixture.h"
@@ -412,26 +415,27 @@
 1688590127 c:\users\ybahamboulaidourah\my-desktop\compiler\stack.h
 	<stdio.h>
 
-1688642548 c:\users\ybahamboulaidourah\my-desktop\compiler\syntax_analyzer.h
+1689024942 c:\users\ybahamboulaidourah\my-desktop\compiler\syntax_analyzer.h
 	"buffer.h"
 	"ast_struct.h"
 
-1688718020 source:c:\users\ybahamboulaidourah\my-desktop\compiler\syntax_analyzer.c
+1689027099 source:c:\users\ybahamboulaidourah\my-desktop\compiler\syntax_analyzer.c
 	<stdbool.h>
 	<string.h>
 	<errno.h>
 	<stdlib.h>
+	<ctype.h>
 	"utils.h"
 	"syntax_analyzer.h"
 	"lexer.h"
 	"lexical_analizer.h"
 
-1688801309 source:c:\users\ybahamboulaidourah\my-desktop\compiler\symbol_t.c
+1688985476 source:c:\users\ybahamboulaidourah\my-desktop\compiler\symbol_t.c
 	"symbol_t.h"
 	<stdlib.h>
 	<string.h>
 
-1688794001 c:\users\ybahamboulaidourah\my-desktop\compiler\symbol_t.h
+1688854932 c:\users\ybahamboulaidourah\my-desktop\compiler\symbol_t.h
 	"buffer.h"
 	"ast_struct.h"
 
@@ -448,17 +452,32 @@
 	"../../lexical_analizer.h"
 	"../../symbol_t.h"
 
-1688799565 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\add_symbol.c
+1688855183 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\add_symbol.c
 	"../../lib/unity_fixture.h"
 	"../../lib/unity.h"
 	"../../lexer.h"
 	"../../lexical_analizer.h"
 	"../../symbol_t.h"
 
-1688800204 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\search_symbol.c
+1688857231 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\search_symbol.c
 	"../../lib/unity_fixture.h"
 	"../../lib/unity.h"
 	"../../lexer.h"
 	"../../lexical_analizer.h"
 	"../../symbol_t.h"
+
+1688998119 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\lexical_analyzer\remove_symbol.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../lexer.h"
+	"../../lexical_analizer.h"
+	"../../symbol_t.h"
+
+1688999620 source:c:\users\ybahamboulaidourah\my-desktop\compiler\test\syntax_analyser\parse_function.c
+	"../../lib/unity_fixture.h"
+	"../../lib/unity.h"
+	"../../syntax_analyzer.h"
+	"../../buffer.h"
+	"../../ast_struct.h"
+	<stdio.h>
 

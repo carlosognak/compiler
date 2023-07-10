@@ -35,3 +35,7 @@ TEST_GROUP_RUNNER(test_group_function_body){
 
    RUN_TEST_CASE(test_group_function_body, test_function_body_is_not_empty)
 }
+TEST_GROUP(test_group_parse_function);
+TEST_GROUP_RUNNER(test_group_parse_function){
+    //RUN_TEST_CASE(test_group_parse_function,test_file_successfully_parsed);
+}
